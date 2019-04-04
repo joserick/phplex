@@ -9,7 +9,7 @@
  * @author <nickbart@gmail.com> Nick Bartkowiak
  * @copyright (c) 2012 Nick Bartkowiak
  * @license http://www.gnu.org/licenses/gpl-3.0.html GNU Public Licence (GPLv3)
- * @version 0.0.2.5
+ * @version 0.0.2.6
  *
  * This file is part of php-plex.
  * 
@@ -124,6 +124,36 @@ abstract class Plex_Server_Library_ItemAbstract
 	 * @var Plex_Server_Library_Item_Media
 	 */
 	protected $media;
+	/**
+	 * The genres info associated with a Plex item.
+	 * @var Plex_Server_Library_Item_Genre[]
+	 */
+	protected $genres;
+	/**
+	 * The director info associated with a Plex item.
+	 * @var Plex_Server_Library_Item_Tag
+	 */
+	protected $director;
+	/**
+	 * The writer info associated with a Plex item.
+	 * @var Plex_Server_Library_Item_Tag
+	 */
+	protected $writer;
+	/**
+	 * The producer info associated with a Plex item.
+	 * @var Plex_Server_Library_Item_Tag
+	 */
+	protected $producer;
+	/**
+	 * The country info associated with a Plex item.
+	 * @var Plex_Server_Library_Item_Tag
+	 */
+	protected $country;
+	/**
+	 * The roles info associated with a Plex item.
+	 * @var Plex_Server_Library_Item_Tag[]
+	 */
+	protected $roles;
 	
 	/**
 	 * Endpoint for listing the child items of a parent or grandparent item.
@@ -156,6 +186,12 @@ abstract class Plex_Server_Library_ItemAbstract
 	 * @uses Plex_Server_Library_ItemAbstract::setUpdatedAt()
 	 * @uses Plex_Server_Library_ItemAbstract::setViewCount()
 	 * @uses Plex_Server_Library_ItemAbstract::setMedia()
+	 * @uses Plex_Server_Library_ItemAbstract::setGenres()
+	 * @uses Plex_Server_Library_ItemAbstract::setDirector()
+	 * @uses Plex_Server_Library_ItemAbstract::setWriter()
+	 * @uses Plex_Server_Library_ItemAbstract::setProducer()
+	 * @uses Plex_Server_Library_ItemAbstract::setCountry()
+	 * @uses Plex_Server_Library_ItemAbstract::setRoles()
 	 *
 	 * @return void
 	 */
@@ -202,6 +238,24 @@ abstract class Plex_Server_Library_ItemAbstract
 		}
 		if (isset($attribute['Media'])) {
 			$this->setMedia($attribute['Media']);
+		}
+		if (isset($attribute['Genre'])) {
+			$this->setGenres($attribute['Genre']);
+		}
+		if (isset($attribute['Director'])) {
+			$this->setDirector($attribute['Director']);
+		}
+		if (isset($attribute['Writer'])) {
+			$this->setWriter($attribute['Writer']);
+		}
+		if (isset($attribute['Producer'])) {
+			$this->setProducer($attribute['Producer']);
+		}
+		if (isset($attribute['Country'])) {
+			$this->setCountry($attribute['Country']);
+		}
+		if (isset($attribute['Role'])) {
+			$this->setRoles($attribute['Role']);
 		}
 	}
 	
@@ -338,6 +392,20 @@ abstract class Plex_Server_Library_ItemAbstract
 		);
 		
 		return new $class($name, $address, $port, $token);
+	}
+	
+	/**
+	 * Build a url with access to the thumbnail image.
+	 *
+	 * @uses Plex_MachineAbstract::$getBaseUrl()
+	 * @uses Plex_Server_Library_ItemAbstract::$thumb
+	 * @uses Plex::$token
+	 *
+	 * @return string An url with access the thumbnail image.
+	 */
+	public function buildUrlThumb()
+	{
+		return $this->getBaseUrl().$this->thumb.'?X-Plex-Token='.$this->token;
 	}
 	
 	/**
@@ -709,5 +777,187 @@ abstract class Plex_Server_Library_ItemAbstract
 	{
 		$mediaObject = new Plex_Server_Library_Item_Media(reset($media));
 		$this->media = $mediaObject;
+	}
+	
+	/**
+	 * Returns the genres info of the item.
+	 *
+	 * @uses Plex_Server_Library_ItemAbstract::$genres
+	 *
+	 * @return Plex_Server_Library_Item_Tag The genres info of the item.
+	 */
+	public function getGenres()
+	{
+		return $this->genres;
+	}
+	
+	/**
+	 * Sets the genres info of the item.
+	 *
+	 * @uses Plex_Server_Library_Item_Tag()
+	 * @uses Plex_Server_Library_ItemAbstract::$genres
+	 *
+	 * @param string $genres Raw genres info that is to be converted into a genres
+	 * info object.
+	 *
+	 * @return void
+	 */
+	public function setGenres($genres)
+	{
+		$genresObject = array();
+		foreach ($genres as $genre) {
+			$genresObject[] = new Plex_Server_Library_Item_Tag($genre);
+		}
+
+		$this->genres = $genresObject;
+	}
+	
+	/**
+	 * Returns the director info of the item.
+	 *
+	 * @uses Plex_Server_Library_ItemAbstract::$director
+	 *
+	 * @return Plex_Server_Library_Item_Tag The director info of the item.
+	 */
+	public function getDirector()
+	{
+		return $this->director;
+	}
+	
+	/**
+	 * Sets the director info of the item.
+	 *
+	 * @uses Plex_Server_Library_Item_Tag()
+	 * @uses Plex_Server_Library_ItemAbstract::$director
+	 *
+	 * @param string $director Raw director info that is to be converted into a director
+	 * info object.
+	 *
+	 * @return void
+	 */
+	public function setDirector($director)
+	{
+		$directorObject = new Plex_Server_Library_Item_Tag(reset($director));
+		$this->director = $directorObject;
+	}
+
+	/**
+	 * Returns the writer info of the item.
+	 *
+	 * @uses Plex_Server_Library_ItemAbstract::$writer
+	 *
+	 * @return Plex_Server_Library_Item_Tag The writer info of the item.
+	 */
+	public function getWriter()
+	{
+		return $this->writer;
+	}
+	
+	/**
+	 * Sets the writer info of the item.
+	 *
+	 * @uses Plex_Server_Library_Item_Tag()
+	 * @uses Plex_Server_Library_ItemAbstract::$writer
+	 *
+	 * @param string $writer Raw writer info that is to be converted into a writer
+	 * info object.
+	 *
+	 * @return void
+	 */
+	public function setWriter($writer)
+	{
+		$writerObject = new Plex_Server_Library_Item_Tag(reset($writer));
+		$this->writer = $writerObject;
+	}
+	
+	/**
+	 * Returns the producer info of the item.
+	 *
+	 * @uses Plex_Server_Library_ItemAbstract::$producer
+	 *
+	 * @return Plex_Server_Library_Item_Tag The producer info of the item.
+	 */
+	public function getProducer()
+	{
+		return $this->producer;
+	}
+	
+	/**
+	 * Sets the producer info of the item.
+	 *
+	 * @uses Plex_Server_Library_Item_Tag()
+	 * @uses Plex_Server_Library_ItemAbstract::$producer
+	 *
+	 * @param string $producer Raw producer info that is to be converted into a producer
+	 * info object.
+	 *
+	 * @return void
+	 */
+	public function setProducer($producer)
+	{
+		$producerObject = new Plex_Server_Library_Item_Tag(reset($producer));
+		$this->producer = $producerObject;
+	}
+	
+	/**
+	 * Returns the country info of the item.
+	 *
+	 * @uses Plex_Server_Library_ItemAbstract::$country
+	 *
+	 * @return Plex_Server_Library_Item_Tag The country info of the item.
+	 */
+	public function getCountry()
+	{
+		return $this->country;
+	}
+	
+	/**
+	 * Sets the country info of the item.
+	 *
+	 * @uses Plex_Server_Library_Item_Tag()
+	 * @uses Plex_Server_Library_ItemAbstract::$country
+	 *
+	 * @param string $country Raw country info that is to be converted into a country
+	 * info object.
+	 *
+	 * @return void
+	 */
+	public function setCountry($country)
+	{
+		$countryObject = new Plex_Server_Library_Item_Tag(reset($country));
+		$this->country = $countryObject;
+	}
+	
+	/**
+	 * Returns the roles info of the item.
+	 *
+	 * @uses Plex_Server_Library_ItemAbstract::$roles
+	 *
+	 * @return Plex_Server_Library_Item_Tag THe roles info of the item.
+	 */
+	public function getRoles()
+	{
+		return $this->roles;
+	}
+	
+	/**
+	 * Sets the roles info of the item.
+	 *
+	 * @uses Plex_Server_Library_Item_Tag()
+	 * @uses Plex_Server_Library_ItemAbstract::$roles
+	 *
+	 * @param string $roles Raw roles info that is to be converted into a roles
+	 * info object.
+	 *
+	 * @return void
+	 */
+	public function setRoles($roles)
+	{
+		$rolesObject = array();
+		foreach ($roles as $role) {
+			$rolesObject[] = new Plex_Server_Library_Item_Tag($role);
+		}
+
+		$this->roles = $rolesObject;
 	}
 }
