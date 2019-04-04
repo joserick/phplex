@@ -49,6 +49,8 @@ require_once(sprintf('%s/Server/Library/Item/Media/File/FileInterface.php', $php
 require_once(sprintf('%s/Server/Library/Item/Media/File/File.php', $phpPlexDir));
 require_once(sprintf('%s/Server/Library/Item/Media/MediaInterface.php', $phpPlexDir));
 require_once(sprintf('%s/Server/Library/Item/Media/Media.php', $phpPlexDir));
+require_once(sprintf('%s/Server/Library/Item/Tag/TagInterface.php', $phpPlexDir));
+require_once(sprintf('%s/Server/Library/Item/Tag/Tag.php', $phpPlexDir));
 require_once(sprintf('%s/Server/Library/ItemInterface.php', $phpPlexDir));
 require_once(sprintf('%s/Server/Library/ItemAbstract.php', $phpPlexDir));
 require_once(sprintf('%s/Server/Library/ItemGrandparentAbstract.php', $phpPlexDir));
