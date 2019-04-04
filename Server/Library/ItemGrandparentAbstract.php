@@ -81,6 +81,13 @@ abstract class Plex_Server_Library_ItemGrandparentAbstract
 	protected $contentRating;
 	
 	/**
+	 * Number of child items (Plex_Server_Library_ItemChildAbstract) that are
+	 * associated with the grandparent. In the case of Shows this is Seasons.
+	 * @var integer
+	 */
+	protected $childCount;
+	
+	/**
 	 * Sets an array of attribues, if they exist, to the corresponding class
 	 * member.
 	 * 
@@ -117,6 +124,9 @@ abstract class Plex_Server_Library_ItemGrandparentAbstract
 		}
 		if (isset($attribute['contentRating'])) {
 			$this->setContentRating($attribute['contentRating']);
+		}
+		if (isset($attribute['childCount'])) {
+			$this->setChildCount($attribute['childCount']);
 		}
 	}
 
@@ -274,5 +284,31 @@ abstract class Plex_Server_Library_ItemGrandparentAbstract
 	public function setContentRating($contentRating)
 	{
 		$this->contentRating = $contentRating;
+	}
+
+	/**
+	 * Returns the item's child count.
+	 *
+	 * @uses Plex_Server_Library_ItemGrandparentAbstract::$childCount
+	 *
+	 * @return integer The item's child count.
+	 */
+	public function getChildCount()
+	{
+		return (int) $this->childCount;
+	}
+	
+	/**
+	 * Sets the item's child count.
+	 *
+	 * @param integer $childCount The item's child count.
+	 *
+	 * @uses Plex_Server_Library_ItemGrandparentAbstract::$childCount
+	 *
+	 * @return void
+	 */
+	public function setChildCount($childCount)
+	{
+		$this->childCount = $childCount;
 	}
 }

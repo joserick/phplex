@@ -115,4 +115,16 @@ class Plex_Server_Library_Item_Show
 		$randomNumber = mt_rand(0, $ceiling);
 		return $allEpisodes[$randomNumber];
 	}
+
+	/**
+	 * Returns an integer of the seasons number for the instantiated show.
+	 *
+	 * @uses Plex_Server_Library_ItemGrandparentAbstract::getChildCount()
+	 *
+	 * @return integer Count of seasons of the Plex library Show.
+	 */
+	public function getCountSeasons()
+	{
+		return 	$this->getChildCount();
+	}
 }
