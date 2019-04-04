@@ -36,7 +36,7 @@ Set Up
 		'shepherd' => array(
 			'address' => '192.168.11.9',
 			'username' => 'username|email',
-            'password' => 'password'
+			'password' => 'password'
 		)
 	);
 	
@@ -118,7 +118,7 @@ Shows, seasons, and episodes
 	// Key
 	$section->getShow('/library/metadata/46585');
 	
-	// Lists of episodes
+	// Lists of recently episodes
 	$section->getRecentlyAiredEpisodes();
 	$section->getRecentlyAddedEpisodes();
 	$section->getRecentlyViewedEpisodes();
