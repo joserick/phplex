@@ -111,6 +111,7 @@ abstract class Plex_Client_ControllerAbstract extends Plex_Client
 	 * @param string $name The name of the Plex client.
 	 * @param string $address The IP address of the Plex client.
 	 * @param integer $port The port on which the Plex client is listening.
+	 * @param string $token The token of the Plex client.
 	 * @param Plex_Server $server The server that registered teh client.
 	 *
 	 * @uses Plex_Client::setServer()
@@ -122,6 +123,7 @@ abstract class Plex_Client_ControllerAbstract extends Plex_Client
 		$name,
 		$address,
 		$port,
+		$token,
 		Plex_Server $server
 	)
 	{
@@ -132,7 +134,8 @@ abstract class Plex_Client_ControllerAbstract extends Plex_Client
 		$controller = new $classString(
 			$name,
 			$address,
-			$port
+			$port,
+			$token
 		);
 		$controller->setServer($server);
 		return $controller;
