@@ -48,7 +48,7 @@ abstract class Plex_Client_ControllerAbstract extends Plex_Client
 	const TYPE_PLAYBACK = 'playback';
 	
 	/**
-	 * String representing the applicaton controller type.
+	 * String representing the application controller type.
 	 */
 	const TYPE_APPLICATION = 'application';
 	
