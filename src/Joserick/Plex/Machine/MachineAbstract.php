@@ -1,5 +1,9 @@
 <?php
 
+namespace Joserick\Plex\Machine;
+
+use Joserick\Plex\Exception\Plex_Exception_Machine;
+
 /**
  * Plex Machine
  * 
@@ -8,7 +12,7 @@
  * @author <nickbart@gmail.com> Nick Bartkowiak
  * @copyright (c) 2013 Nick Bartkowiak
  * @license http://www.gnu.org/licenses/gpl-3.0.html GNU Public Licence (GPLv3)
- * @version 0.0.2.5
+ * @version 0.0.2.6
  *
  * This file is part of php-plex.
  * 
@@ -32,7 +36,7 @@
  * @author <nickbart@gmail.com> Nick Bartkowiak
  * @copyright (c) 2012 Nick Bartkowiak
  * @license http://www.gnu.org/licenses/gpl-3.0.html GNU Public Licence (GPLv3)
- * @version 0.0.2.5
+ * @version 0.0.2.6
  */
 abstract class Plex_MachineAbstract implements Plex_MachineInterface
 {
@@ -54,6 +58,12 @@ abstract class Plex_MachineAbstract implements Plex_MachineInterface
 	 * @var integer 
 	 */
 	protected $port;
+
+    /**
+     * The token of the Plex machine on the network.
+     * @var string
+     */
+    protected $token;
 	
 	/**
 	 * Returns the base URL, which will be standard for all requests made to the
