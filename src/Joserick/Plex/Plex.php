@@ -31,50 +31,6 @@ use Joserick\Plex\Exception\Plex_Exception_Server;
  * GNU General Public License for more details.
  */
 
-$phpPlexDir = dirname(__FILE__);
-
-// Exception
-require_once(sprintf('%s/Exception/ExceptionInterface.php', $phpPlexDir));
-require_once(sprintf('%s/Exception/ExceptionAbstract.php', $phpPlexDir));
-require_once(sprintf('%s/Exception/Machine.php', $phpPlexDir));
-require_once(sprintf('%s/Exception/Server.php', $phpPlexDir));
-require_once(sprintf('%s/Exception/Server/Library.php', $phpPlexDir));
-// Machine
-require_once(sprintf('%s/Machine/MachineInterface.php', $phpPlexDir));
-require_once(sprintf('%s/Machine/MachineAbstract.php', $phpPlexDir));
-// Server
-require_once(sprintf('%s/Server.php', $phpPlexDir));
-require_once(sprintf('%s/Server/Library.php', $phpPlexDir));
-require_once(sprintf('%s/Server/Library/SectionAbstract.php', $phpPlexDir));
-require_once(sprintf('%s/Server/Library/Section/Movie.php', $phpPlexDir));
-require_once(sprintf('%s/Server/Library/Section/Show.php', $phpPlexDir));
-require_once(sprintf('%s/Server/Library/Section/Artist.php', $phpPlexDir));
-require_once(sprintf('%s/Server/Library/Section/Photo.php', $phpPlexDir));
-require_once(sprintf('%s/Server/Library/Item/Media/File/FileInterface.php', $phpPlexDir));
-require_once(sprintf('%s/Server/Library/Item/Media/File/File.php', $phpPlexDir));
-require_once(sprintf('%s/Server/Library/Item/Media/MediaInterface.php', $phpPlexDir));
-require_once(sprintf('%s/Server/Library/Item/Media/Media.php', $phpPlexDir));
-require_once(sprintf('%s/Server/Library/Item/Tag/TagInterface.php', $phpPlexDir));
-require_once(sprintf('%s/Server/Library/Item/Tag/Tag.php', $phpPlexDir));
-require_once(sprintf('%s/Server/Library/ItemInterface.php', $phpPlexDir));
-require_once(sprintf('%s/Server/Library/ItemAbstract.php', $phpPlexDir));
-require_once(sprintf('%s/Server/Library/ItemGrandparentAbstract.php', $phpPlexDir));
-require_once(sprintf('%s/Server/Library/ItemParentAbstract.php', $phpPlexDir));
-require_once(sprintf('%s/Server/Library/ItemChildAbstract.php', $phpPlexDir));
-require_once(sprintf('%s/Server/Library/Item/Movie.php', $phpPlexDir));
-require_once(sprintf('%s/Server/Library/Item/Show.php', $phpPlexDir));
-require_once(sprintf('%s/Server/Library/Item/Season.php', $phpPlexDir));
-require_once(sprintf('%s/Server/Library/Item/Episode.php', $phpPlexDir));
-require_once(sprintf('%s/Server/Library/Item/Artist.php', $phpPlexDir));
-require_once(sprintf('%s/Server/Library/Item/Album.php', $phpPlexDir));
-require_once(sprintf('%s/Server/Library/Item/Track.php', $phpPlexDir));
-// Client
-require_once(sprintf('%s/Client.php', $phpPlexDir));
-require_once(sprintf('%s/Client/ControllerAbstract.php', $phpPlexDir));
-require_once(sprintf('%s/Client/Controller/Navigation.php', $phpPlexDir));
-require_once(sprintf('%s/Client/Controller/Playback.php', $phpPlexDir));
-require_once(sprintf('%s/Client/Controller/Application.php', $phpPlexDir));
-
 /**
  * Bootstrap class for using php-plex to interact with the Plex HTTP API.
  * 
