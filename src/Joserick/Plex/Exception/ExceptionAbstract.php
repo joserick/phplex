@@ -1,5 +1,9 @@
 <?php
 
+namespace Joserick\Plex\Exception;
+
+use Exception;
+
 /**
  * Plex Exception (Plexception)
  * 
@@ -77,6 +81,8 @@ abstract class Plex_ExceptionAbstract extends Exception
 	 * @uses Exception::__construct()
 	 *
 	 * @return void
+	 *
+	 * @throws Exception Type exception is not supported
 	 */
 	public function __construct($type, $params = array())
 	{
