@@ -93,7 +93,7 @@ class Plex_Client extends Plex_MachineAbstract
 	/**
 	 * Given a controller type, returns an instantiated controller object.
 	 *
-	 * @param string $type The type of controller to be insantiated.
+	 * @param string $type The type of controller to be instantiated.
 	 *
 	 * @uses Plex_Client_ControllerAbstract::factory()
 	 * @uses Plex_Client::$name
@@ -101,7 +101,7 @@ class Plex_Client extends Plex_MachineAbstract
 	 * @uses Plex_Client::$port
 	 * @uses Plex_Client::getServer()
 	 *
-	 * @return Plex_Client_ControllerAbstract The requsted controller.
+	 * @return Plex_Client_ControllerAbstract The requested controller.
 	 */
 	private function getController($type)
 	{
@@ -247,7 +247,7 @@ class Plex_Client extends Plex_MachineAbstract
 	/**
 	 * Sets the mac address of the Plex client.
 	 *
-	 * @param string $machineIdentifier The macc address of the Plex client.
+	 * @param string $machineIdentifier The mac address of the Plex client.
 	 *
 	 * @uses Plex_Client::$machineIdentifier
 	 *
