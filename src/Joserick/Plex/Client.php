@@ -31,7 +31,7 @@
  * @author <nickbart@gmail.com> Nick Bartkowiak
  * @copyright (c) 2012 Nick Bartkowiak
  * @license http://www.gnu.org/licenses/gpl-3.0.html GNU Public Licence (GPLv3)
- * @version 0.0.1
+ * @version 0.0.2
  */
 class Plex_Client extends Plex_MachineAbstract
 {
@@ -72,19 +72,22 @@ class Plex_Client extends Plex_MachineAbstract
 	 * @param string $name The name of the Plex client.
 	 * @param string $address The IP address of the Plex client.
 	 * @param integer $port The port on which the Plex client is listening.
+	 * @param string $token The token of the Plex client.
 	 *
 	 * @uses Plex_MachineAbstract::$name
 	 * @uses Plex_MachineAbstract::$address
 	 * @uses Plex_MachineAbstract::$port
+	 * @uses Plex_MachineAbstract::$token
 	 * @uses Plex_Client::DEFAULT_PORT
 	 *
 	 * @return void
 	 */
-	public function __construct($name, $address, $port)
+	public function __construct($name, $address, $port, $token)
 	{
 		$this->name = $name;
 		$this->address = $address;
 		$this->port = $port ? $port : self::DEFAULT_PORT;
+		$this->token = $token;
 	}
 	
 	/**
@@ -107,6 +110,7 @@ class Plex_Client extends Plex_MachineAbstract
 			$this->name,
 			$this->address,
 			$this->port,
+			$this->token,
 			$this->getServer()
 		);
 	}
@@ -190,6 +194,16 @@ class Plex_Client extends Plex_MachineAbstract
 	public function getPort()
 	{
 		return $this->port;
+	}
+	
+	/**
+	 * Returns the token on which the Plex machine listens.
+	 *
+	 * @return string|null The token on which the Plex machine listens.
+	 */
+	public function getToken()
+	{
+		return $this->token;
 	}
 	
 	/**
