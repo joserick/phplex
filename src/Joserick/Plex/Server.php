@@ -8,7 +8,7 @@
  * @author <nickbart@gmail.com> Nick Bartkowiak
  * @copyright (c) 2012 Nick Bartkowiak
  * @license http://www.gnu.org/licenses/gpl-3.0.html GNU Public Licence (GPLv3)
- * @version 0.0.1
+ * @version 0.0.2
  *
  * This file is part of php-plex.
  * 
@@ -31,7 +31,7 @@
  * @author <nickbart@gmail.com> Nick Bartkowiak
  * @copyright (c) 2012 Nick Bartkowiak
  * @license http://www.gnu.org/licenses/gpl-3.0.html GNU Public Licence (GPLv3)
- * @version 0.0.1
+ * @version 0.0.2
  */
 class Plex_Server extends Plex_MachineAbstract
 {
@@ -61,16 +61,12 @@ class Plex_Server extends Plex_MachineAbstract
 	 *
 	 * @return void
 	 */
-	public function __construct($name, $address, $port, $token=false)
+	public function __construct($name, $address, $port, $token)
 	{
 		$this->name = $name;
 		$this->address = $address;
 		$this->port = $port ? $port : self::DEFAULT_PORT;
-		if ($token) {
-			$this->token = $token;
-		}else{
-			throw new Exception("Error: Required plex token");
-		}
+		$this->token = $token;
 	}
 	
 	/**
@@ -104,7 +100,8 @@ class Plex_Server extends Plex_MachineAbstract
 			$client = new Plex_Client(
 				$attribute['name'],
 				$attribute['address'],
-				(int) $attribute['port']
+				(int) $attribute['port'],
+				$attribute['token'] ?? $this->token
 			);
 			$client->setHost($attribute['host']);
 			$client->setMachineIdentifier($attribute['machineIdentifier']);
@@ -122,6 +119,7 @@ class Plex_Server extends Plex_MachineAbstract
 	 * @uses Plex_MachineAbstract::$name
 	 * @uses Plex_MachineAbstract::$address
 	 * @uses Plex_MachineAbstract::$port
+	 * @uses Plex_MachineAbstract::$token
 	 *
 	 * @return Plex_Server_Library The Plex library belonging to the
 	 * instantiated Plex server.
@@ -170,5 +168,17 @@ class Plex_Server extends Plex_MachineAbstract
 	public function getPort()
 	{
 		return $this->port;
+	}
+	
+	/**
+	 * Returns the token on which the Plex machine listens.
+	 *
+	 * @author <joserick.92@gmail.com> José Erick Carreón
+	 *
+	 * @return string The token on which the Plex machine listens.
+	 */
+	public function getToken()
+	{
+		return $this->token;
 	}
 }
