@@ -1,5 +1,9 @@
 <?php
 
+namespace Joserick\Plex\Exception\Server;
+
+use Joserick\Plex\Exception\Plex_ExceptionAbstract;
+
 /**
  * Plex Exception (Plexception)
  * 
@@ -40,7 +44,7 @@ class Plex_Exception_Server_Library extends Plex_ExceptionAbstract
 	 * @var mixed[]
 	 */
 	protected $validTypes = array(
-		// Abstract type for specifiying that a resource of type and name was
+		// Abstract type for specifying that a resource of type and name was
 		// not found.
 		'RESOURCE_NOT_FOUND' => array(
 			'code' => 404,
