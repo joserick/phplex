@@ -1,5 +1,7 @@
 <?php
 
+namespace Joserick\Plex\Machine;
+
 /**
  * Plex Machine
  * 
@@ -8,7 +10,7 @@
  * @author <nickbart@gmail.com> Nick Bartkowiak
  * @copyright (c) 2012 Nick Bartkowiak
  * @license http://www.gnu.org/licenses/gpl-3.0.html GNU Public Licence (GPLv3)
- * @version 0.0.1
+ * @version 0.0.2
  *
  * This file is part of php-plex.
  * 
@@ -31,7 +33,7 @@
  * @author <nickbart@gmail.com> Nick Bartkowiak
  * @copyright (c) 2012 Nick Bartkowiak
  * @license http://www.gnu.org/licenses/gpl-3.0.html GNU Public Licence (GPLv3)
- * @version 0.0.1
+ * @version 0.0.2
  */
 interface Plex_MachineInterface
 {
@@ -55,4 +57,11 @@ interface Plex_MachineInterface
 	 * @return integer The port on which the Plex machine listens.
 	 */
 	public function getPort();
+
+    /**
+     * Returns the token on which the Plex machine listens.
+     *
+     * @return string The token on which the Plex machine listens.
+     */
+    public function getToken();
 }
