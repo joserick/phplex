@@ -1,5 +1,7 @@
 <?php
 
+namespace Joserick\Plex\Exception;
+
 /**
  * Plex Exception (Plexception)
  * 
