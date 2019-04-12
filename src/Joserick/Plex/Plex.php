@@ -91,7 +91,7 @@ class Plex
 
 	/**
 	 * A list of the Plex client machines on the network This is found upon
-	 * registring of Plex server. The first registered Plex server will go out
+	 * registering of Plex server. The first registered Plex server will go out
 	 * and get the list of available clients and register them accordingly.
 	 * @var Plex_Client[]
 	 */
@@ -103,7 +103,7 @@ class Plex
 	 * list of available clients and will register them accordingly.
 	 *
 	 * @param array $servers An associative array of Plex server machines on the
-	 * network defined thusly:
+	 * network define thusly:
 	 *
 	 * array (
 	 *     'server-1-name' => array(
@@ -142,7 +142,7 @@ class Plex
 		}
 		
 		// We are going to use the first server in the list to get a list of the
-		// availalble clients and register those automatically.
+		// available clients and register those automatically.
 		$serverKeys = array_keys(self::$servers);
 		$serverName = reset($serverKeys);
 		$this->registerClients(
@@ -204,7 +204,7 @@ class Plex
 	}
 	
 	/**
-	 * Returns the token of the sesion plex
+	 * Returns the token of the session plex
 	 *
 	 * @author <joserick.92@gmail.com> José Erick Carreón
 	 *
