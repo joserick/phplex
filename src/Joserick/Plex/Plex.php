@@ -78,7 +78,7 @@ require_once(sprintf('%s/Client/Controller/Application.php', $phpPlexDir));
  * @author <nickbart@gmail.com> Nick Bartkowiak
  * @copyright (c) 2013 Nick Bartkowiak
  * @license http://www.gnu.org/licenses/gpl-3.0.html GNU Public Licence (GPLv3)
- * @version 0.0.2.5
+ * @version 0.0.2.6
  */
 class Plex
 {
@@ -206,12 +206,16 @@ class Plex
 	/**
 	 * Returns the token of the sesion plex
 	 *
+	 * @author <joserick.92@gmail.com> José Erick Carreón
+	 *
 	 * @param string $username The username of the Plex server account.
 	 * @param string $password The password of the Plex server account.
 	 *
 	 * @uses Plex::$registerServers()
 	 *
 	 * @return string The token Plex account.
+	 *
+	 * @throws Plex_Exception_Server() Server token not obtained.
 	 */
 	public function getToken($username, $password) {
 		$host = "https://plex.tv/users/sign_in.json";
@@ -230,8 +234,14 @@ class Plex
 		curl_setopt($process, CURLOPT_POST, 1);
 		curl_setopt($process, CURLOPT_RETURNTRANSFER, true);
 		$data = curl_exec($process);
-		$curlError = curl_error($process);
-		$json = json_decode($data, true);
-		return $json['user']['authentication_token'];
+		if ($data === FALSE) {
+			throw new Plex_Exception_Machine(
+				'CURL_ERROR',
+				array(curl_errno($data), curl_error($data))
+			);
+		}
+		curl_close($process);
+		
+		return json_decode($data, true)['user']['authentication_token'];
 	}
 }
