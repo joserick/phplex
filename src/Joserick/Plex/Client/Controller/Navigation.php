@@ -1,5 +1,9 @@
 <?php
 
+namespace Joserick\Plex\Client\Controller;
+
+use Joserick\Plex\Client\Plex_Client_ControllerAbstract;
+
 /**
  * Plex Client Navigation Controller
  * 
