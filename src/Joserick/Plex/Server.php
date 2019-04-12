@@ -70,8 +70,8 @@ class Plex_Server extends Plex_MachineAbstract
 	}
 	
 	/**
-	 * Returns all the availalble clients to which the Plex server has access
-	 * inedxed by the Plex client name.
+	 * Returns all the available clients to which the Plex server has access
+	 * indexed by the Plex client name.
 	 *
 	 * @uses Plex_MachineAbstract::getBaseUrl()
 	 * @uses Plex_MachineAbstract::makeCall()
@@ -114,7 +114,7 @@ class Plex_Server extends Plex_MachineAbstract
 	}
 	
 	/**
-	 * Returns the Plex library belonging to the instantiatied Plex server.
+	 * Returns the Plex library belonging to the instantiated Plex server.
 	 *
 	 * @uses Plex_MachineAbstract::$name
 	 * @uses Plex_MachineAbstract::$address
