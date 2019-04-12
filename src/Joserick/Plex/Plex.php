@@ -1,5 +1,10 @@
 <?php
 
+namespace Joserick\Plex;
+
+use Joserick\Plex\Exception\Plex_Exception_Machine;
+use Joserick\Plex\Exception\Plex_Exception_Server;
+
 /**
  * Plex Bootstrap
  *
