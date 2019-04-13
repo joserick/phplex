@@ -394,7 +394,7 @@ abstract class Plex_Server_Library_ItemAbstract
 	public static function factory($type, $name, $address, $port, $token)
 	{
 		$class = sprintf(
-			'Plex_Server_Library_Item_%s',
+			__NAMESPACE__.'\Item\Plex_Server_Library_Item_%s',
 			ucfirst($type)
 		);
 		
