@@ -1,5 +1,9 @@
 <?php
 
+namespace Joserick\Plex\Server\Library\Item;
+
+use Joserick\Plex\Server\Library\Plex_Server_Library_ItemChildAbstract;
+
 /**
  * Plex Library Episode
  * 
