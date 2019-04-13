@@ -95,7 +95,7 @@ class Plex_Server_Library_Item_Artist
 	 * @uses Plex_Server_Library::getItems()
 	 * @uses Plex_Server_Library_ItemAbstract::buildAllLeavesEndpoint()
 	 *
-	 * @ return Plex_Server_Library_Item_Track[] Array of all the tracks for
+	 * @return Plex_Server_Library_Item_Track[] Array of all the tracks for
 	 * a given artist.
 	 */
 	public function getAllTracks()
