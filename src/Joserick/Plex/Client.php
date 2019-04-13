@@ -126,7 +126,7 @@ class Plex_Client extends Plex_MachineAbstract
 	 * @uses Plex_Client::getController()
 	 * @uses Plex_Client_ControllerAbstract::TYPE_NAVIGATION
 	 *
-	 * @return Plex_Client_Controller_Navigation The navigation controller.
+	 * @return Client\Controller\Plex_Client_Controller_Navigation The navigation controller.
 	 */
 	public function getNavigationController()
 	{
@@ -141,7 +141,7 @@ class Plex_Client extends Plex_MachineAbstract
 	 * @uses Plex_Client::getController()
 	 * @uses Plex_Client_ControllerAbstract::TYPE_PLAYBACK
 	 *
-	 * @return Plex_Client_Controller_Playback The playback controller.
+	 * @return Client\Controller\Plex_Client_Controller_Playback The playback controller.
 	 */
 	public function getPlaybackController()
 	{
@@ -156,7 +156,7 @@ class Plex_Client extends Plex_MachineAbstract
 	 * @uses Plex_Client::getController()
 	 * @uses Plex_Client_ControllerAbstract::TYPE_APPLICATION
 	 *
-	 * @return Plex_Client_Controller_Application The application controller.
+	 * @return Client\Controller\Plex_Client_Controller_Application The application controller.
 	 */
 	public function getApplicationController()
 	{
