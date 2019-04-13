@@ -165,7 +165,7 @@ class Plex
 	}
 	
 	/**
-	 * Returns the token of the session plex
+	 * Returns the token of the Plex server
 	 *
 	 * @author <joserick.92@gmail.com> José Erick Carreón
 	 *
@@ -176,7 +176,7 @@ class Plex
 	 *
 	 * @return string The token Plex account.
 	 *
-	 * @throws Plex_Exception_Server() Server token not obtained.
+	 * @throws Plex_Exception_Server Server token not obtained.
 	 */
 	public function getToken($username, $password) {
 		$host = "https://plex.tv/users/sign_in.json";
