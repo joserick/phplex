@@ -1,5 +1,7 @@
 <?php
 
+namespace Joserick\Plex\Server\Library;
+
 /**
  * Plex Library Item
  * 
@@ -38,7 +40,7 @@
 interface Plex_Server_Library_ItemInterface
 {
 	/**
-	 * Sets an array of attribues, if they exist, to the corresponding class
+	 * Sets an array of attributes, if they exist, to the corresponding class
 	 * member.
 	 * 
 	 * @param array $attribute An array of item attributes as passed back by the
