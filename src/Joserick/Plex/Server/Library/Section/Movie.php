@@ -1,5 +1,10 @@
 <?php
 
+namespace Joserick\Plex\Server\Library\Section;
+
+use Joserick\Plex\Server\Library\Item\Plex_Server_Library_Item_Movie;
+use Joserick\Plex\Server\Library\Plex_Server_Library_SectionAbstract;
+
 /**
  * Plex Server Library Movie Section
  * 
@@ -413,7 +418,7 @@ class Plex_Server_Library_Section_Movie
 	}
 	
 	/**
-	 * Searches moview titles for the passed query and returns the movies that
+	 * Searches movie titles for the passed query and returns the movies that
 	 * match.
 	 *
 	 * @param string $query The search term against which the movies will be
@@ -440,11 +445,11 @@ class Plex_Server_Library_Section_Movie
 	 *
 	 * @param integer|string $polymorphicData Either a rating key, a key, or a
 	 * title for an exact title match that will be used to retrieve a single
-	 * mvoie.
+	 * movie.
 	 *
 	 * @uses Plex_Server_Library_SectionAbstract::getPolymorphicItem()
 	 *
-	 * @retrun Plex_Server_Library_Item_Movie A Plex library movie object.
+	 * @return Plex_Server_Library_Item_Movie A Plex library movie object.
 	 */	
 	public function getMovie($polymorphicData)
 	{

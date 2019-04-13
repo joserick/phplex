@@ -1,5 +1,11 @@
 <?php
 
+namespace Joserick\Plex\Server\Library\Section;
+
+use Joserick\Plex\Server\Library\Plex_Server_Library_SectionAbstract;
+use Joserick\Plex\Server\Library\Item\Plex_Server_Library_Item_Show;
+use Joserick\Plex\Server\Library\Item\Plex_Server_Library_Item_Episode;
+
 /**
  * Plex Server Library Show Section
  * 
@@ -302,7 +308,7 @@ class Plex_Server_Library_Section_Show
 	 *
 	 * @uses Plex_Server_Library_SectionAbstract::getPolymorphicItem()
 	 *
-	 * @retrun Plex_Server_Library_Item_Show A Plex library show object.
+	 * @return Plex_Server_Library_Item_Show A Plex library show object.
 	 */
 	public function getShow($polymorphicData)
 	{
@@ -318,7 +324,7 @@ class Plex_Server_Library_Section_Show
 	 *
 	 * @uses Plex_Server_Library_SectionAbstract::getPolymorphicItem()
 	 *
-	 * @retrun Plex_Server_Library_Item_Episode A Plex library episode object.
+	 * @return Plex_Server_Library_Item_Episode A Plex library episode object.
 	 */
 	public function getEpisode($polymorphicData)
 	{

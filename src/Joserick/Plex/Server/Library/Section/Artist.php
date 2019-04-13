@@ -1,5 +1,11 @@
 <?php
 
+namespace Joserick\Plex\Server\Library\Section;
+
+use Joserick\Plex\Server\Library\Plex_Server_Library_SectionAbstract;
+use Joserick\Plex\Server\Library\Item\Plex_Server_Library_Item_Album;
+use Joserick\Plex\Server\Library\Item\Plex_Server_Library_Item_Artist;
+
 /**
  * Plex Server Library Artist Section
  * 
@@ -62,7 +68,7 @@ class Plex_Server_Library_Section_Artist
 	}
 	
 	/**
-	 * Returns all the albusm for the given section.
+	 * Returns all the albums for the given section.
 	 *
 	 * @uses Plex_Server_Library::getItems()
 	 * @uses Plex_Server_Library_SectionAbstract::buildEndpoint()
@@ -218,7 +224,7 @@ class Plex_Server_Library_Section_Artist
 	 *
 	 * @uses Plex_Server_Library_SectionAbstract::getPolymorphicItem()
 	 *
-	 * @retrun Plex_Server_Library_Item_Artist A Plex library artist object.
+	 * @return Plex_Server_Library_Item_Artist A Plex library artist object.
 	 */
  	public function getArtist($polymorphicData)
 	{
@@ -234,7 +240,7 @@ class Plex_Server_Library_Section_Artist
 	 *
 	 * @uses Plex_Server_Library_SectionAbstract::getPolymorphicItem()
 	 *
-	 * @retrun Plex_Server_Library_Item_Track A Plex library track object.
+	 * @return Plex_Server_Library_Item_Track A Plex library track object.
 	 */
  	public function getTrack($polymorphicData)
 	{
