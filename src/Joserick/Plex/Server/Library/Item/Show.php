@@ -1,5 +1,9 @@
 <?php
 
+namespace Joserick\Plex\Server\Library\Item;
+
+use Joserick\Plex\Server\Library\Plex_Server_Library_ItemGrandparentAbstract;
+
 /**
  * Plex Library Show
  * 
@@ -55,7 +59,7 @@ class Plex_Server_Library_Item_Show
 	}
 	
 	/**
-	 * Returns an array of all the season objects for the intstantiated show.
+	 * Returns an array of all the season objects for the instantiated show.
 	 *
 	 * @uses Plex_Server_Library::getItems()
 	 * @uses Plex_Server_Library_ItemAbstract::buildChildrenEndpoint()
@@ -91,7 +95,7 @@ class Plex_Server_Library_Item_Show
 	 * @uses Plex_Server_Library::getItems()
 	 * @uses Plex_Server_Library_ItemAbstract::buildAllLeavesEndpoint()
 	 *
-	 * @ return Plex_Server_Library_Item_Episode[] Array of all the episodes for
+	 * @return Plex_Server_Library_Item_Episode[] Array of all the episodes for
 	 * a given show.
 	 */
 	public function getAllEpisodes()

@@ -1,5 +1,9 @@
 <?php
 
+namespace Joserick\Plex\Server\Library\Item;
+
+use Joserick\Plex\Server\Library\Plex_Server_Library_ItemParentAbstract;
+
 /**
  * Plex Library Season
  * 
@@ -55,7 +59,7 @@ class Plex_Server_Library_Item_Season
 	}
 	
 	/**
-	 * Returns an array of all the episode objects for the intstantiated season.
+	 * Returns an array of all the episode objects for the instantiated season.
 	 *
 	 * @uses Plex_Server_Library::getItems()
 	 * @uses Plex_Server_Library_ItemAbstract::buildChildrenEndpoint()

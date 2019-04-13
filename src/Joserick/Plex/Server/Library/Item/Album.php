@@ -1,5 +1,9 @@
 <?php
 
+namespace Joserick\Plex\Server\Library\Item;
+
+use Joserick\Plex\Server\Library\Plex_Server_Library_ItemParentAbstract;
+
 /**
  * Plex Library Album
  * 
@@ -55,7 +59,7 @@ class Plex_Server_Library_Item_Album
 	}
 	
 	/**
-	 * Returns an array of all the track objects for the intstantiated album.
+	 * Returns an array of all the track objects for the instantiated album.
 	 *
 	 * @uses Plex_Server_Library::getItems()
 	 * @uses Plex_Server_Library_ItemAbstract::buildChildrenEndpoint()
