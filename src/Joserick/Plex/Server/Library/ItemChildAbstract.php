@@ -153,7 +153,7 @@ abstract class Plex_Server_Library_ItemChildAbstract
 	 */
 	public function getGrandparentKey()
 	{
-		return $this->getGrandparentKey;
+		return $this->grandparentKey;
 	}
 	
 	/**
