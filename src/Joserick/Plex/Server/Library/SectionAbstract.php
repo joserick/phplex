@@ -1,5 +1,11 @@
 <?php
 
+namespace Joserick\Plex\Server\Library;
+
+use Joserick\Plex\Exception\Server\Plex_Exception_Server_Library;
+use Joserick\Plex\Server\Plex_Server_Library;
+use DateTime;
+
 /**
  * Plex Server Library Section
  * 
