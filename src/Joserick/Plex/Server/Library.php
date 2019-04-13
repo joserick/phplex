@@ -155,7 +155,7 @@ class Plex_Server_Library extends Plex_Server
 	 * @uses Plex_Server_Library_ItemAbstract::factory()
 	 * @uses Plex_Server_Library_ItemInterface::setAttributes()
 	 *
-	 * @return Plex_Server_Library_Item[] An array of plex library items.
+	 * @return mixed[] An array of plex library items.
 	 */
 	protected function getItems($endpoint)
 	{
@@ -234,7 +234,7 @@ class Plex_Server_Library extends Plex_Server
 	 * @uses Plex_Server_Library_SectionAbstract::factory()
 	 * @uses Plex_Server_Library_SectionAbstract::setAttributes()
 	 *
-	 * @return Plex_Server_Library_Section[] An array of user defined Plex
+	 * @return mixed[] An array of user defined Plex
 	 * library sections.
 	 */
 	public function getSections()
@@ -270,9 +270,9 @@ class Plex_Server_Library extends Plex_Server
 	 * @uses Plex_Server_Library::getSections()
 	 * @uses Plex_Server_Library_Section::getKey()
 	 *
-	 * @return Plex_Server_Library_Section The request library section.
+	 * @return mixed The request library section.
 	 *
-	 * @throws Plex_Exception_Server_Library()
+	 * @throws Plex_Exception_Server_Library
 	 *
 	 * @deprecated This method is deprecated in lieu of the new getSection()
 	 * method.
@@ -304,7 +304,7 @@ class Plex_Server_Library extends Plex_Server
 	 * @uses Plex_Server_Library_Section::getKey()
  	 * @uses Plex_Server_Library_Section::getTitle()
 	 *
-	 * @return Plex_Server_Library_Section The request library section.
+	 * @return mixed The request library section.
 	 *
 	 * @throws Plex_Exception_Server_Library()
 	 */
@@ -338,7 +338,7 @@ class Plex_Server_Library extends Plex_Server
 	 * @uses Plex_Server_Library::getItem()
 	 * @uses Plex_Server_Library::ENPOINT_RECENTLY_ADDED
 	 * 
-	 * @return Plex_Server_Library_Item[] An array of plex library items.
+	 * @return mixed[] An array of plex library items.
 	 */
 	public function getRecentlyAddedItems()
 	{
@@ -351,7 +351,7 @@ class Plex_Server_Library extends Plex_Server
 	 * @uses Plex_Server_Library::getItem()
 	 * @uses Plex_Server_Library::ENPOINT_RECENTLY_ADDED
 	 * 
-	 * @return Plex_Server_Library_Item[] An array of plex library items.
+	 * @return mixed[] An array of plex library items.
 	 */
 	public function getOnDeckItems()
 	{
