@@ -26,7 +26,7 @@
 
 /**
  * Base class that represents a Plex library item at the bottom of the 
- * Thierarchy. This includes items such as episodes and movies.
+ * hierarchy. This includes items such as episodes and movies.
  * 
  * @category php-plex
  * @package Plex_Server
@@ -77,7 +77,7 @@ abstract class Plex_Server_Library_ItemChildAbstract
 	protected $viewOffset;
 	
 	/**
-	 * Sets an array of attribues, if they exist, to the corresponding class
+	 * Sets an array of attributes, if they exist, to the corresponding class
 	 * member.
 	 * 
 	 * @param array $attribute An array of item attributes as passed back by the
@@ -209,7 +209,7 @@ abstract class Plex_Server_Library_ItemChildAbstract
 	/**
 	 * Sets the grandparent item's thumb.
 	 *
-	 * @param string $parentTitle string The grandparent item's thumb.
+	 * @param string $grandparentThumb The grandparent item's thumb.
 	 *
 	 * @uses Plex_Server_Library_ItemChildAbstract::$grandparentThumb
 	 *
