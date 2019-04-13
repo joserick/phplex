@@ -133,7 +133,7 @@ abstract class Plex_Client_ControllerAbstract extends Plex_Client
 	)
 	{
 		$classString = sprintf(
-			'Plex_Client_Controller_%s',
+			__NAMESPACE__.'\Controller\Plex_Client_Controller_%s',
 			ucfirst($type)
 		);
 		$controller = new $classString(
