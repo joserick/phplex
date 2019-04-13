@@ -70,7 +70,7 @@ abstract class Plex_Server_Library_SectionAbstract extends Plex_Server_Library
 	protected $title;
 	
 	/**
-	 * The metadata agent for the sectiion.
+	 * The metadata agent for the section.
 	 * @var string
 	 */
 	protected $agent;
@@ -151,7 +151,7 @@ abstract class Plex_Server_Library_SectionAbstract extends Plex_Server_Library
 	const ENDPOINT_CATEGORY_GENRE = 'genre';
 	
 	/**
-	 * Endpoint for retrieiving items for a section by year.
+	 * Endpoint for retrieving items for a section by year.
 	 */
 	const ENDPOINT_CATEGORY_YEAR = 'year';
 	
@@ -171,7 +171,7 @@ abstract class Plex_Server_Library_SectionAbstract extends Plex_Server_Library
 	const SEARCH_TYPE_SHOW = 2;
 	
 	/**
-	 * Parameter for searching teleivision episodes.
+	 * Parameter for searching television episodes.
 	 */
 	const SEARCH_TYPE_EPISODE = 4;
 
@@ -297,8 +297,7 @@ abstract class Plex_Server_Library_SectionAbstract extends Plex_Server_Library
 	 * @uses Plex_Server_Library::getItems()
 	 * @uses Plex_Server_Library_SectionAbstract::buildEndpoint()
 	 * @uses Plex_Server_Library_SectionAbstract::ENDPOINT_CATEGORY_ALL
-	 *
-	 * return Plex_Server_Library_ItemAbstract[] An array of Plex library items.
+	 * @return Plex_Server_Library_ItemAbstract[] An array of Plex library items.
 	 */
 	protected function getAllItems()
 	{
@@ -350,7 +349,7 @@ abstract class Plex_Server_Library_SectionAbstract extends Plex_Server_Library
 	 * @uses Plex_Server_Library_SectionAbstract::buildEndpoint()
 	 * @uses Plex_Server_Library_SectionAbstract::ENDPOINT_CATEGORY_RECENTLY_ADDED
 	 *
-	 * return Plex_Server_Library_ItemAbstract[] An array of Plex library items.
+	 * @return Plex_Server_Library_ItemAbstract[] An array of Plex library items.
 	 */
 	protected function getRecentlyAddedSectionItems()
 	{
@@ -368,7 +367,7 @@ abstract class Plex_Server_Library_SectionAbstract extends Plex_Server_Library
 	 * @uses Plex_Server_Library_SectionAbstract::buildEndpoint()
 	 * @uses Plex_Server_Library_SectionAbstract::ENDPOINT_CATEGORY_ON_DECK
 	 *
-	 * return Plex_Server_Library_ItemAbstract[] An array of Plex library items.
+	 * @return Plex_Server_Library_ItemAbstract[] An array of Plex library items.
 	 */
 	protected function getOnDeckSectionItems()
 	{
@@ -385,7 +384,7 @@ abstract class Plex_Server_Library_SectionAbstract extends Plex_Server_Library
 	 * @uses Plex_Server_Library_SectionAbstract::buildEndpoint()
 	 * @uses Plex_Server_Library_SectionAbstract::ENDPOINT_CATEGORY_RECENTLY_VIEWED
 	 *
-	 * return Plex_Server_Library_ItemAbstract[] An array of Plex library items.
+	 * @return Plex_Server_Library_ItemAbstract[] An array of Plex library items.
 	 */
 	protected function getRecentlyViewedItems()
 	{
@@ -406,7 +405,7 @@ abstract class Plex_Server_Library_SectionAbstract extends Plex_Server_Library
 	 * @uses Plex_Server_Library_SectionAbstract::buildEndpoint()
 	 * @uses Plex_Server_Library_SectionAbstract::ENDPOINT_CATEGORY_COLLECTION
 	 *
-	 * return Plex_Server_Library_ItemAbstract[] An array of Plex library items.
+	 * @return Plex_Server_Library_ItemAbstract[] An array of Plex library items.
 	 */
 	protected function getItemsByCollection($collectionKey)
 	{
@@ -432,7 +431,7 @@ abstract class Plex_Server_Library_SectionAbstract extends Plex_Server_Library
 	 * @uses Plex_Server_Library_SectionAbstract::buildEndpoint()
 	 * @uses Plex_Server_Library_SectionAbstract::ENDPOINT_CATEGORY_FIRST_CHARACTER
 	 *
-	 * return Plex_Server_Library_ItemAbstract[] An array of Plex library items.
+	 * @return Plex_Server_Library_ItemAbstract[] An array of Plex library items.
 	 */
 	protected function getItemsByFirstCharacter($character)
 	{
@@ -459,7 +458,7 @@ abstract class Plex_Server_Library_SectionAbstract extends Plex_Server_Library
 	 * @uses Plex_Server_Library_SectionAbstract::buildEndpoint()
 	 * @uses Plex_Server_Library_SectionAbstract::ENDPOINT_CATEGORY_GENRE
 	 *
-	 * return Plex_Server_Library_ItemAbstract[] An array of Plex library items.
+	 * @return Plex_Server_Library_ItemAbstract[] An array of Plex library items.
 	 */	
 	protected function getItemsByGenre($genreKey)
 	{
@@ -485,7 +484,7 @@ abstract class Plex_Server_Library_SectionAbstract extends Plex_Server_Library
 	 * @uses Plex_Server_Library_SectionAbstract::buildEndpoint()
 	 * @uses Plex_Server_Library_SectionAbstract::ENDPOINT_CATEGORY_YEAR
 	 *
-	 * return Plex_Server_Library_ItemAbstract[] An array of Plex library items.
+	 * @return Plex_Server_Library_ItemAbstract[] An array of Plex library items.
 	 */	
 	protected function getItemsByYear($year)
 	{
@@ -579,7 +578,7 @@ abstract class Plex_Server_Library_SectionAbstract extends Plex_Server_Library
 			// children or grandchildren. This has two implications. We can't
 			// search at this level, so we have to "get" then loop/match/return.
 			// It also means that to get the calling function we have to change
-			// the depth as there is an extra function inbetween.
+			// the depth as there is an extra function in between.
 			$depth = 2;
 			$functionType = 'search';
 			
@@ -681,6 +680,7 @@ abstract class Plex_Server_Library_SectionAbstract extends Plex_Server_Library
 	 * @param string $name The name of the Plex server.
 	 * @param string $address The IP address of the Plex server.
 	 * @param integer $port The port on which the Plex server is listening.
+	 * @param string $token The $token of the Plex server.
 	 *
 	 * @return Plex_Server_Library_SectionAbstract An instantiated section child
 	 * class.
