@@ -89,7 +89,7 @@ abstract class Plex_MachineAbstract implements Plex_MachineInterface
 	 * XML attributes. This allows a set of XML nodes to be passed and all the
 	 * attribues extracted and returned as an associated array.
 	 *
-	 * @param SimpleXMLElement $xmlNodes An XML node to have its attributes
+	 * @param \SimpleXMLElement $xml An XML node to have its attributes
 	 * converted to a useful PHP array.
 	 * @param integer $pass The number of recursive levels down the method has
 	 * run. This is mainly used for determining if we are on our first pass or
@@ -142,7 +142,7 @@ abstract class Plex_MachineAbstract implements Plex_MachineInterface
 	 *
 	 * @param string $url The URL to which the request is to be made.
 	 *
-	 * @return SimpleXMLElement An XML document from a Plex machine.
+	 * @return array An XML document from a Plex machine converted in array.
 	 *
 	 * @throws Plex_Exception_Machine
 	 */
