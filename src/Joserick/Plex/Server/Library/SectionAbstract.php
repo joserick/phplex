@@ -513,7 +513,7 @@ abstract class Plex_Server_Library_SectionAbstract extends Plex_Server_Library
 	 * @param integer|string $polymorphicData Either a rating key, a key, or a
 	 * title for an exact title match that will be used to retrieve a single
 	 * library item.
-	 * @param boolean scopedToItem Tells the method whether or not we are
+	 * @param boolean $scopedToItem Tells the method whether or not we are
 	 * scoped to an item. If we are scoped to an item then we are use get
 	 * methods instead of search methods.
 	 *
