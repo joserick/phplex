@@ -2,6 +2,8 @@
 
 namespace Joserick\Plex\Server\Library;
 
+use DateTime;
+
 /**
  * Plex Library Parent Item
  * 
