@@ -76,10 +76,10 @@ abstract class Plex_Server_Library_ItemParentAbstract
 	 * Date the item was made originally available.
 	 * @var DateTime
 	 */
-	protected $originallyAvailalbleAt;
+	protected $originallyAvailableAt;
 	
 	/**
-	 * Sets an array of attribues, if they exist, to the corresponding class
+	 * Sets an array of attributes, if they exist, to the corresponding class
 	 * member.
 	 * 
 	 * @param array $attribute An array of item attributes as passed back by the
@@ -213,7 +213,7 @@ abstract class Plex_Server_Library_ItemParentAbstract
 	/**
 	 * Sets the parent item's index.
 	 *
-	 * @param integer $parentRatingKey The parent item's index.
+	 * @param integer $parentIndex The parent item's index.
 	 *
 	 * @uses Plex_Server_Library_ItemParentAbstract::$parentIndex
 	 *
@@ -239,7 +239,7 @@ abstract class Plex_Server_Library_ItemParentAbstract
 	/**
 	 * Sets the parent item's thumb.
 	 *
-	 * @param string $parentTitle string The parent item's thumb.
+	 * @param string $parentThumb string The parent item's thumb.
 	 *
 	 * @uses Plex_Server_Library_ItemParentAbstract::$parentThumb
 	 *
@@ -257,7 +257,7 @@ abstract class Plex_Server_Library_ItemParentAbstract
 	 *
 	 * @return DateTime The time at which the item was made available.
 	 */	
-	public function getOriginallyAvailalbleAt()
+	public function getOriginallyAvailableAt()
 	{
 		return $this->originallyAvailableAt;
 	}
@@ -265,7 +265,7 @@ abstract class Plex_Server_Library_ItemParentAbstract
 	/**
 	 * Sets the time at which the item was made available.
 	 *
-	 * @param integer $updatedAtTs The unix timestamp representing the time the
+	 * @param integer $originallyAvailableAtTs The unix timestamp representing the time the
 	 * item was made available. This will be turned into a DateTime object.
 	 * 
 	 * @uses Plex_Server_Library_ItemAbstract::$originallyAvailableAt
