@@ -317,6 +317,7 @@ abstract class Plex_Server_Library_ItemAbstract
 	 * @param integer|string $polymorphicData Either an index, a key, or a title
 	 * for an exact title match that will be used to retrieve a single library
 	 * item.
+	 * @param boolean $scopedToItem In this case, $scopedToItem does not affect the result.
 	 *
 	 * @uses Plex_Server_Library_ItemAbstract::getItemByIndex()
 	 * @uses Plex_Server_Library_SectionAbstract::getPolymorphicItem()
