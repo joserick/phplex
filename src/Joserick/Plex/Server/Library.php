@@ -1,5 +1,12 @@
 <?php
 
+namespace Joserick\Plex\Server;
+
+use Joserick\Plex\Plex_Server;
+use Joserick\Plex\Exception\Server\Plex_Exception_Server_Library;
+use Joserick\Plex\Server\Library\Plex_Server_Library_ItemAbstract;
+use Joserick\Plex\Server\Library\Plex_Server_Library_SectionAbstract;
+
 /**
  * Plex Server Library
  * 
@@ -106,6 +113,8 @@ class Plex_Server_Library extends Plex_Server
 	/**
 	 * Generic way of building a url agains the Plex library.
 	 *
+	 * @param string $endpoint A URL endpoint of a Plex service.
+	 *
 	 * @uses Plex_MachineAbstract::getBaseUrl()
 	 * @uses Plex_Server_Library::ENDPOINT_LIBRARY
 	 *
@@ -136,6 +145,8 @@ class Plex_Server_Library extends Plex_Server
 	/**
 	 * Generic way of requesting Plex library items.
 	 *
+	 * @param string $endpoint A URL endpoint of a Plex service.
+	 *
 	 * @uses Plex_MachineAbstract::$name
 	 * @uses Plex_MachineAbstract::$address
 	 * @uses Plex_MachineAbstract::$port
@@ -144,7 +155,7 @@ class Plex_Server_Library extends Plex_Server
 	 * @uses Plex_Server_Library_ItemAbstract::factory()
 	 * @uses Plex_Server_Library_ItemInterface::setAttributes()
 	 *
-	 * return Plex_Server_Library_Item[] An array of plex library items.
+	 * @return Plex_Server_Library_Item[] An array of plex library items.
 	 */
 	protected function getItems($endpoint)
 	{
@@ -173,7 +184,7 @@ class Plex_Server_Library extends Plex_Server
 	
 	/**
 	 * Given a function name, uses that name to decide what Plex library item
-	 * item type with whic the function is associated. This is useful when 
+	 * item type with which the function is associated. This is useful when
 	 * trying to polymorphically request items because we can use the calling
 	 * function to abstractly identify what type of item with which we are 
 	 * dealing.
@@ -212,7 +223,7 @@ class Plex_Server_Library extends Plex_Server
 
 	/**
 	 * Returns an array of user defined Plex library sections that can be used
-	 * to interact with th eitems contained within.
+	 * to interact with the items contained within.
 	 *
 	 * @uses Plex_MachineAbstract::$name
 	 * @uses Plex_MachineAbstract::$address
@@ -250,7 +261,7 @@ class Plex_Server_Library extends Plex_Server
 	}
 	
 	/**
-	 * Returns a Plex library section by its given key. Here we simpoly run
+	 * Returns a Plex library section by its given key. Here we simply run
 	 * self::getSections() because the endpoint /library/sections/ID does not
 	 * return full section data, it returns the categories below the section.
 	 *
@@ -263,7 +274,7 @@ class Plex_Server_Library extends Plex_Server
 	 *
 	 * @throws Plex_Exception_Server_Library()
 	 *
-	 * @deprecated This method is deprectated in lieu of the new getSection()
+	 * @deprecated This method is deprecated in lieu of the new getSection()
 	 * method.
 	 */
 	public function getSectionByKey($key)
@@ -327,7 +338,7 @@ class Plex_Server_Library extends Plex_Server
 	 * @uses Plex_Server_Library::getItem()
 	 * @uses Plex_Server_Library::ENPOINT_RECENTLY_ADDED
 	 * 
-	 * return Plex_Server_Library_Item[] An array of plex library items.
+	 * @return Plex_Server_Library_Item[] An array of plex library items.
 	 */
 	public function getRecentlyAddedItems()
 	{
@@ -340,7 +351,7 @@ class Plex_Server_Library extends Plex_Server
 	 * @uses Plex_Server_Library::getItem()
 	 * @uses Plex_Server_Library::ENPOINT_RECENTLY_ADDED
 	 * 
-	 * return Plex_Server_Library_Item[] An array of plex library items.
+	 * @return Plex_Server_Library_Item[] An array of plex library items.
 	 */
 	public function getOnDeckItems()
 	{
