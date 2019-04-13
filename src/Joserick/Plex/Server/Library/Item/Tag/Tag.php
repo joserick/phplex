@@ -1,5 +1,7 @@
 <?php
 
+namespace Joserick\Plex\Server\Library\Item\Tag;
+
 /**
  * Plex Library Item Tag
  * 
