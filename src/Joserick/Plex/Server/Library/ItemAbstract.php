@@ -26,7 +26,7 @@
 
 /**
  * Base class that helps define a Plex library item with all the generic methods
- * and membes shared by all Plex library items.
+ * and member shared by all Plex library items.
  * 
  * @category php-plex
  * @package Plex_Server
@@ -126,7 +126,7 @@ abstract class Plex_Server_Library_ItemAbstract
 	protected $media;
 	/**
 	 * The genres info associated with a Plex item.
-	 * @var Plex_Server_Library_Item_Genre[]
+	 * @var Plex_Server_Library_Item_Tag[]
 	 */
 	protected $genres;
 	/**
@@ -166,7 +166,7 @@ abstract class Plex_Server_Library_ItemAbstract
 	const ENDPOINT_ALL_LEAVES = 'allLeaves';
 	
 	/**
-	 * Sets an array of attribues, if they exist, to the corresponding class
+	 * Sets an array of attributes, if they exist, to the corresponding class
 	 * member.
 	 * 
 	 * @param array $attribute An array of item attributes as passed back by the
@@ -303,7 +303,7 @@ abstract class Plex_Server_Library_ItemAbstract
 	}
 	
 	/**
-	 * Override of the setion version of this method so we can apply slightly
+	 * Override of the section version of this method so we can apply slightly
 	 * different rules when retrieving single children and grandchildren at the
 	 * item level.
 	 *
@@ -380,6 +380,7 @@ abstract class Plex_Server_Library_ItemAbstract
 	 * @param string $name The name of the Plex server.
 	 * @param string $address The IP address of the Plex server.
 	 * @param integer $port The port on which the Plex server is listening.
+	 * @param string $token The token of the Plex server.
 	 *
 	 * @return Plex_Server_Library_ItemAbstract An instantiated item child
 	 * class.
@@ -768,7 +769,7 @@ abstract class Plex_Server_Library_ItemAbstract
 	 * @uses Plex_Server_Library_Item_Media()
 	 * @uses Plex_Server_Library_ItemAbstract::$media
 	 *
-	 * @param string $media Raw media info that is to be converted into a media
+	 * @param array $media Raw media info that is to be converted into a media
 	 * info object.
 	 *
 	 * @return void
@@ -784,7 +785,7 @@ abstract class Plex_Server_Library_ItemAbstract
 	 *
 	 * @uses Plex_Server_Library_ItemAbstract::$genres
 	 *
-	 * @return Plex_Server_Library_Item_Tag The genres info of the item.
+	 * @return Plex_Server_Library_Item_Tag[] The genres info of the item.
 	 */
 	public function getGenres()
 	{
@@ -797,7 +798,7 @@ abstract class Plex_Server_Library_ItemAbstract
 	 * @uses Plex_Server_Library_Item_Tag()
 	 * @uses Plex_Server_Library_ItemAbstract::$genres
 	 *
-	 * @param string $genres Raw genres info that is to be converted into a genres
+	 * @param array $genres Raw genres info that is to be converted into a genres
 	 * info object.
 	 *
 	 * @return void
@@ -811,7 +812,7 @@ abstract class Plex_Server_Library_ItemAbstract
 
 		$this->genres = $genresObject;
 	}
-	
+
 	/**
 	 * Returns the director info of the item.
 	 *
@@ -830,7 +831,7 @@ abstract class Plex_Server_Library_ItemAbstract
 	 * @uses Plex_Server_Library_Item_Tag()
 	 * @uses Plex_Server_Library_ItemAbstract::$director
 	 *
-	 * @param string $director Raw director info that is to be converted into a director
+	 * @param array $director Raw director info that is to be converted into a director
 	 * info object.
 	 *
 	 * @return void
@@ -859,7 +860,7 @@ abstract class Plex_Server_Library_ItemAbstract
 	 * @uses Plex_Server_Library_Item_Tag()
 	 * @uses Plex_Server_Library_ItemAbstract::$writer
 	 *
-	 * @param string $writer Raw writer info that is to be converted into a writer
+	 * @param array $writer Raw writer info that is to be converted into a writer
 	 * info object.
 	 *
 	 * @return void
@@ -888,7 +889,7 @@ abstract class Plex_Server_Library_ItemAbstract
 	 * @uses Plex_Server_Library_Item_Tag()
 	 * @uses Plex_Server_Library_ItemAbstract::$producer
 	 *
-	 * @param string $producer Raw producer info that is to be converted into a producer
+	 * @param array $producer Raw producer info that is to be converted into a producer
 	 * info object.
 	 *
 	 * @return void
@@ -917,7 +918,7 @@ abstract class Plex_Server_Library_ItemAbstract
 	 * @uses Plex_Server_Library_Item_Tag()
 	 * @uses Plex_Server_Library_ItemAbstract::$country
 	 *
-	 * @param string $country Raw country info that is to be converted into a country
+	 * @param array $country Raw country info that is to be converted into a country
 	 * info object.
 	 *
 	 * @return void
@@ -933,7 +934,7 @@ abstract class Plex_Server_Library_ItemAbstract
 	 *
 	 * @uses Plex_Server_Library_ItemAbstract::$roles
 	 *
-	 * @return Plex_Server_Library_Item_Tag THe roles info of the item.
+	 * @return Plex_Server_Library_Item_Tag[] The roles info of the item.
 	 */
 	public function getRoles()
 	{
@@ -946,7 +947,7 @@ abstract class Plex_Server_Library_ItemAbstract
 	 * @uses Plex_Server_Library_Item_Tag()
 	 * @uses Plex_Server_Library_ItemAbstract::$roles
 	 *
-	 * @param string $roles Raw roles info that is to be converted into a roles
+	 * @param array $roles Raw roles info that is to be converted into a roles
 	 * info object.
 	 *
 	 * @return void
