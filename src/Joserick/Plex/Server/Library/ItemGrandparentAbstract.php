@@ -1,5 +1,7 @@
 <?php
 
+namespace Joserick\Plex\Server\Library;
+
 /**
  * Plex Library Grandparent Item
  * 
