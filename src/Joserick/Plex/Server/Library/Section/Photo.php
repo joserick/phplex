@@ -1,5 +1,9 @@
 <?php
 
+namespace Joserick\Plex\Server\Library\Section;
+
+use Joserick\Plex\Server\Library\Plex_Server_Library_SectionAbstract;
+
 /**
  * Plex Server Library Photo Section
  * 
