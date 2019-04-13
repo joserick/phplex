@@ -88,7 +88,7 @@ abstract class Plex_Server_Library_ItemGrandparentAbstract
 	protected $childCount;
 	
 	/**
-	 * Sets an array of attribues, if they exist, to the corresponding class
+	 * Sets an array of attributes, if they exist, to the corresponding class
 	 * member.
 	 * 
 	 * @param array $attribute An array of item attributes as passed back by the
@@ -197,7 +197,7 @@ abstract class Plex_Server_Library_ItemGrandparentAbstract
 	/**
 	 * Sets the item's viewed leaf count.
 	 *
-	 * @param integer $leafCount The item's viewed leaf count.
+	 * @param integer $viewedLeafCount The item's viewed leaf count.
 	 *
 	 * @uses Plex_Server_Library_ItemGrandparentAbstract::$viewedLeafCount
 	 *
