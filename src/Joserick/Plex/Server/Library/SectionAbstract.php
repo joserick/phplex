@@ -694,7 +694,7 @@ abstract class Plex_Server_Library_SectionAbstract extends Plex_Server_Library
 	public static function factory($type, $name, $address, $port, $token)
 	{
 		$class = sprintf(
-			'Plex_Server_Library_Section_%s',
+			__NAMESPACE__.'\Section\Plex_Server_Library_Section_%s',
 			ucfirst($type)
 		);
 		
