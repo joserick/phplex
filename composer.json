@@ -1,7 +1,7 @@
 {
 	"name": "joserick/php-plex",
 	"type": "library",
-	"description": "A simple PHP library for interacting with the Plex (http://plexapp.com) HTTP Control API. (forked from https://github.com/nickbart/php-plex)",
+	"description": "A PHP library for interacting with the Plex (https://www.plex.tv) HTTP Control API. (forked from https://github.com/nickbart/php-plex)",
 	"keywords": ["plex"],
 	"license": "MIT",
 	"authors": [
@@ -13,15 +13,15 @@
 		{
 			"name": "Jose Erick",
 			"email": "joserick.92@gmail.com",
-			"homepage": "http://www.joserick.com"
+			"homepage": "https://github.com/joserick"
 		}
 	],
 	"require": {
 		"php": ">=5.6"
 	},
 	"autoload": {
-		"psr-0": {
-			"Plex": "/src/Joserick/PHPlex/"
+		"psr-4": {
+			"Joserick\\Plex\\": "src/Joserick/Plex"
 		}
 	}
 }
