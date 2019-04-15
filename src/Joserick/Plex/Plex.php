@@ -185,6 +185,18 @@ class Plex
 	}
 	
 	/**
+	 * Returns the requested all clients.
+	 *
+	 * @uses Plex::$clients
+	 *
+	 * @return Plex_Client[] The requested Plex client machine.
+	 */
+	public function getAllClients()
+	{
+		return self::$clients;
+	}
+	
+	/**
 	 * Returns the token of the Plex server
 	 *
 	 * @author <joserick.92@gmail.com> José Erick Carreón
