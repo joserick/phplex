@@ -41,6 +41,11 @@ use Joserick\Plex\Server\Plex_Server_Library;
 class Plex_Server extends Plex_MachineAbstract
 {
 	/**
+	 * The default address on which a Plex server listens.
+	 */
+	const DEFAULT_ADDRESS = 'localhost';
+	
+	/**
 	 * The default port on which a Plex server listens.
 	 */
 	const DEFAULT_PORT = 32400;
@@ -62,6 +67,7 @@ class Plex_Server extends Plex_MachineAbstract
 	 * @uses Plex_MachineAbstract::$name
 	 * @uses Plex_MachineAbstract::$address
 	 * @uses Plex_MachineAbstract::$port
+	 * @uses Plex_Server::DEFAULT_ADDRESS
 	 * @uses Plex_Server::DEFAULT_PORT
 	 *
 	 * @return void
@@ -69,7 +75,7 @@ class Plex_Server extends Plex_MachineAbstract
 	public function __construct($name, $address, $port, $token)
 	{
 		$this->name = $name;
-		$this->address = $address;
+		$this->address = $address ? $address : self::DEFAULT_ADDRESS;
 		$this->port = $port ? $port : self::DEFAULT_PORT;
 		$this->token = $token;
 	}
