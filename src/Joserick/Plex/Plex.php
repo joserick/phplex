@@ -228,7 +228,7 @@ class Plex
 	 *
 	 * @throws Plex_Exception_Server Server token not obtained.
 	 */
-	public function getToken($username, $password) {
+	private function getToken($username, $password) {
 		$host = "https://plex.tv/users/sign_in.json";
 		$header = array(
 			'Content-Type: application/xml; charset=utf-8',
