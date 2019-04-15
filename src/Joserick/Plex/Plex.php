@@ -110,11 +110,13 @@ class Plex
 	{
 		// Register each server.
 		foreach ($servers as $name => $server) {
+			$address = isset($server['address']) ? $server['address'] : NULL;
 			$port = isset($server['port']) ? $server['port'] : NULL;
-			$token = $this->getToken($server['username'], $server['password']);
+			$token = isset($server['token']) ? $server['token'] :
+				$this->getToken($server['username'], $server['password']);
 			self::$servers[$name] = new Plex_Server(
 				$name,
-				$server['address'],
+				$address,
 				$port,
 				$token
 			);
