@@ -112,7 +112,7 @@ class Plex_Server extends Plex_MachineAbstract
 				$attribute['name'],
 				$attribute['address'],
 				(int) $attribute['port'],
-				$attribute['token'] ?? $this->token
+				isset($attribute['token']) ? $attribute['token'] : $this->token
 			);
 			$client->setHost($attribute['host']);
 			$client->setMachineIdentifier($attribute['machineIdentifier']);
