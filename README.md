@@ -31,12 +31,21 @@ composer require joserick/php-plex
 ```
 ## Documentation
 You can see more function of PHP-Plex in [Github Wiki](https://github.com/joserick/php-plex/wiki).
+
 Also you can see all the classes, methods and properties  in the [Documentation](http://docs.joserick.com/php-plex/index.html).
 ## Getting a PlexServer Instance
 
 ```php
+// include composer autoload
+require 'vendor/autoload.php';
 
+// import the Joserick Plex
+use Joserick\Plex\Plex;
+
+// build plex object with you account data.
 $plex = new Plex('username', 'password', 'address');
+
+// to finally create server instances
 $server = $plex->getServer();
 ```
 If you want add multiples  servers with data  more specifics.
