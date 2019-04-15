@@ -57,6 +57,24 @@ class Plex
 	 * @var Plex_Client[]
 	 */
 	private static $clients = array();
+
+	/**
+	 * Sets up our Plex using the minimum amount of data required to
+	 * interact.
+	 *
+	 * @param string $username The username of the Plex acount.
+	 * @param string $password The password of the Plex acount.
+	 * @param string $address The IP address of the Plex server.
+	 * @param integer $port The port on which the Plex server is listening.
+	 *
+	 * @return void
+	 */
+	public function __construct($username = NULL, $password = NULL, $address = NULL, $port = NULL)
+	{
+		if (!is_null($username) && !is_null($password)) {
+			$this->registerServers(['Plex' => compact('username', 'password', 'address', 'port'));
+		}
+	}
 	
 	/**
 	 * Allows an instantiating software to define a list of Plex servers on the
