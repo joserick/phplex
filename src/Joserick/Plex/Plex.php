@@ -73,7 +73,7 @@ class Plex
 	public function __construct($username = NULL, $password = NULL, $address = NULL, $port = NULL)
 	{
 		if (!is_null($username) && !is_null($password)) {
-			$this->registerServers(['Plex' => compact('username', 'password', 'address', 'port'));
+			$this->registerServers(['Plex' => compact('username', 'password', 'address', 'port')]);
 		}
 	}
 	
