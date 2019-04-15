@@ -204,6 +204,18 @@ class Plex_Server_Library_Item_Media_File
 	}
 	
 	/**
+	 * Returns the path of the file.
+	 *
+	 * @uses Plex_Server_Library_Item_Media_File::getFile()
+	 *
+	 * @return string The path of the file.
+	 */
+	public function getPath()
+	{
+		return $this->getFile();
+	}
+	
+	/**
 	 * Sets the path of the file.
 	 *
 	 * @uses Plex_Server_Library_Item_Media_File::$file
