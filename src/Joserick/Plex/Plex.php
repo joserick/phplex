@@ -4,6 +4,7 @@ namespace Joserick\Plex;
 
 use Joserick\Plex\Exception\Plex_Exception_Machine;
 use Joserick\Plex\Exception\Plex_Exception_Server;
+use Joserick\Plex\Exception\Plex_Exception_Client;
 
 /**
  * Plex Bootstrap
@@ -148,7 +149,8 @@ class Plex
 	}
 	
 	/**
-	 * Returns the requested server by the unique name under which it was registered.
+	 * Returns the requested of the firt server or by the unique name under
+	 * which it was registered.
 	 *
 	 * @param string $serverName The unique name of the requested server.
 	 *
@@ -158,8 +160,12 @@ class Plex
 	 *
 	 * @throws Plex_Exception_Server
 	 */
-	public function getServer($serverName)
+	public function getServer($serverName = NULL)
 	{
+		if (is_null($serverName)) {
+			return reset(self::$servers);
+		}
+
 		if (!isset(self::$servers[$serverName])) {
 			throw new Plex_Exception_Server(
 				'RESOURCE_NOT_FOUND', 
@@ -171,7 +177,8 @@ class Plex
 	}
 	
 	/**
-	 * Returns the requested client by the unique name under which it was registered.
+	 * Returns the requested firt client or by the unique name under which it
+	 * was registered.
 	 *
 	 * @param string $clientName The unique name of the requested client.
 	 *
@@ -179,8 +186,19 @@ class Plex
 	 *
 	 * @return Plex_Client The requested Plex client machine.
 	 */
-	public function getClient($clientName)
+	public function getClient($clientName = NULL)
 	{
+		if (is_null($clientName)) {
+			return reset(self::$clients);
+		}
+
+		if (!isset(self::$clients[$clientName])) {
+			throw new Plex_Exception_Client(
+				'RESOURCE_NOT_FOUND',
+				array($clientName)
+			);
+		}
+
 		return self::$clients[$clientName];
 	}
 	
