@@ -114,7 +114,7 @@ class Plex_Server_Library_Item_Tag
 	 *
 	 * @uses Plex_Server_Library_Item_Tag::$filter
 	 *
-	 * @return integer The filter of the tag info.
+	 * @return string The filter of the tag info.
 	 */
 	public function getFilter()
 	{
@@ -124,7 +124,7 @@ class Plex_Server_Library_Item_Tag
 	/**
 	 * Sets the filter of the tag info.
 	 *
-	 * @param integer $filter The filter of the tag info.
+	 * @param string $filter The filter of the tag info.
 	 *
 	 * @uses Plex_Server_Library_Item_Tag::$filter
 	 *
@@ -140,7 +140,7 @@ class Plex_Server_Library_Item_Tag
 	 *
 	 * @uses Plex_Server_Library_Item_Tag::$tag
 	 *
-	 * @return integer The tag of the tag info.
+	 * @return string The tag of the tag info.
 	 */
 	public function getTag()
 	{
@@ -150,7 +150,7 @@ class Plex_Server_Library_Item_Tag
 	/**
 	 * Sets the tag data of the tag info.
 	 *
-	 * @param integer $tag The tag of the tag info.
+	 * @param string $tag The tag of the tag info.
 	 *
 	 * @uses Plex_Server_Library_Item_Tag::$tag
 	 *
@@ -159,5 +159,17 @@ class Plex_Server_Library_Item_Tag
 	public function setTag($tag)
 	{
 		$this->tag = $tag;
+	}
+
+	/**
+	 * Returns the name of the tag info.
+	 *
+	 * @uses Plex_Server_Library_Item_Tag::$getTag()
+	 *
+	 * @return string The name of the tag info.
+	 */
+	public function getName()
+	{
+		return $this->getTag();
 	}
 }
