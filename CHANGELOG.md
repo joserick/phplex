@@ -1,5 +1,29 @@
 
 #### [Current]
+ * [89f4ceb](../../commit/89f4ceb) - __(Jose Erick Carreon)__ fix: Installation
+ * [2d89f1a](../../commit/2d89f1a) - __(Jose Erick Carreon)__ feat: Added new keywords
+ * [c056be9](../../commit/c056be9) - __(Jose Erick Carreon)__ fix: Autoload
+ * [b54147b](../../commit/b54147b) - __(Jose Erick Carreon)__ feat: Changed namespace path
+ * [36cbad0](../../commit/36cbad0) - __(Jose Erick Carreon)__ feat: New Traid for movies and shows sections
+ * [0eb7f70](../../commit/0eb7f70) - __(Jose Erick Carreon)__ feat: Added constant 'contentRating' for movies and shows
+ * [fb1d108](../../commit/fb1d108) - __(Jose Erick Carreon)__ feat: Added trait for function in common
+ * [e4cf1d5](../../commit/e4cf1d5) - __(Jose Erick Carreon)__ chore: Change path
+ * [39f3ecc](../../commit/39f3ecc) - __(Jose Erick Carreon)__ chore: Changed name and license
+ * [249db5f](../../commit/249db5f) - __(Jose Erick Carreon)__ Update README.md
+ * [f3e49e9](../../commit/f3e49e9) - __(Jose Erick Carreon)__ feat: Added function get name
+ * [5b29944](../../commit/5b29944) - __(Jose Erick Carreon)__ feat: Changed function getToken to private
+ * [6b749e0](../../commit/6b749e0) - __(Jose Erick Carreon)__ feat: Added autoload code in section installation
+ * [b190b3a](../../commit/b190b3a) - __(Jose Erick Carreon)__ feat: Added new sections as installation, documentation, etc.
+ * [914a092](../../commit/914a092) - __(Jose Erick Carreon)__ fix: Syntaxis
+ * [85b52ef](../../commit/85b52ef) - __(Jose Erick Carreon)__ style: Change use isset for php 5.6
+ * [4280845](../../commit/4280845) - __(Jose Erick Carreon)__ feat: Added default server address
+ * [f69e1c3](../../commit/f69e1c3) - __(Jose Erick Carreon)__ feat: Added function get path of file
+ * [4985414](../../commit/4985414) - __(Jose Erick Carreon)__ feat: Added functionality for get first registered of the client and sever
+ * [b1e3b62](../../commit/b1e3b62) - __(Jose Erick Carreon)__ feat: Added client level error handling
+ * [022b6c0](../../commit/022b6c0) - __(Jose Erick Carreon)__ feat: Added function for get all clientes of plex server
+ * [5f42493](../../commit/5f42493) - __(Jose Erick Carreon)__ feat: Added value null in case not exist attributes
+ * [3902a41](../../commit/3902a41) - __(Jose Erick Carreon)__ feat: Added function constructor
+ * [c8e01ef](../../commit/c8e01ef) - __(Jose Erick Carreon)__ Create CHANGELOG
  * [03690d3](../../commit/03690d3) - __(Jose Erick Carreon)__ Create LICENSE
  * [5276ab1](../../commit/5276ab1) - __(Jose Erick Carreon)__ feat: Image that specific the sections of the plex library
  * [065a48c](../../commit/065a48c) - __(Jose Erick Carreon)__ style: fix comment for documentation
