@@ -162,6 +162,11 @@ abstract class Plex_Server_Library_SectionAbstract extends Plex_Server_Library
 	const ENDPOINT_CATEGORY_YEAR = 'year';
 	
 	/**
+	 * Endpoint for retrieving shows by content rating.
+	 */
+	const ENDPOINT_CATEGORY_CONTENT_RATING = 'contentRating';
+	
+	/**
 	 * Endpoint for searching a section for items.
 	 */
 	const ENDPOINT_SEARCH = 'search';
