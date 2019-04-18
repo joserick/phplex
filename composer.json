@@ -21,7 +21,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Joserick\\Plex\\": "src/Joserick/Plex"
+			"Joserick\\PHPlex\\": "src/Joserick/PHPlex"
 		}
 	}
 }
