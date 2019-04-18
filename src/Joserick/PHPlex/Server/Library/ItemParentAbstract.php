@@ -1,6 +1,6 @@
 <?php
 
-namespace Joserick\Plex\Server\Library;
+namespace Joserick\PHPlex\Server\Library;
 
 use DateTime;
 

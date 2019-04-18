@@ -1,8 +1,8 @@
 <?php
 
-namespace Joserick\Plex\Exception\Server;
+namespace Joserick\PHPlex\Exception\Server;
 
-use Joserick\Plex\Exception\Plex_ExceptionAbstract;
+use Joserick\PHPlex\Exception\Plex_ExceptionAbstract;
 
 /**
  * Plex Exception (Plexception)

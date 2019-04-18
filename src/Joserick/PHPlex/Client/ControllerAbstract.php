@@ -1,9 +1,9 @@
 <?php
 
-namespace Joserick\Plex\Client;
+namespace Joserick\PHPlex\Client;
 
-use Joserick\Plex\Plex_Server;
-use Joserick\Plex\Plex_Client;
+use Joserick\PHPlex\Plex_Server;
+use Joserick\PHPlex\Plex_Client;
 
 /**
  * Plex Client Controller

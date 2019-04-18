@@ -1,10 +1,10 @@
 <?php
 
-namespace Joserick\Plex\Server\Library;
+namespace Joserick\PHPlex\Server\Library;
 
-use Joserick\Plex\Server\Library\Item\Media\Plex_Server_Library_Item_Media;
-use Joserick\Plex\Server\Library\Item\Tag\Plex_Server_Library_Item_Tag;
-use Joserick\Plex\Server\Plex_Server_Library;
+use Joserick\PHPlex\Server\Library\Item\Media\Plex_Server_Library_Item_Media;
+use Joserick\PHPlex\Server\Library\Item\Tag\Plex_Server_Library_Item_Tag;
+use Joserick\PHPlex\Server\Plex_Server_Library;
 use DateTime;
 
 /**

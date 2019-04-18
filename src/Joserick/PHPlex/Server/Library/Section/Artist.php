@@ -1,10 +1,10 @@
 <?php
 
-namespace Joserick\Plex\Server\Library\Section;
+namespace Joserick\PHPlex\Server\Library\Section;
 
-use Joserick\Plex\Server\Library\Plex_Server_Library_SectionAbstract;
-use Joserick\Plex\Server\Library\Item\Plex_Server_Library_Item_Album;
-use Joserick\Plex\Server\Library\Item\Plex_Server_Library_Item_Artist;
+use Joserick\PHPlex\Server\Library\Plex_Server_Library_SectionAbstract;
+use Joserick\PHPlex\Server\Library\Item\Plex_Server_Library_Item_Album;
+use Joserick\PHPlex\Server\Library\Item\Plex_Server_Library_Item_Artist;
 
 /**
  * Plex Server Library Artist Section

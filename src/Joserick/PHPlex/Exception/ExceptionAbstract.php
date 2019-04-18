@@ -1,6 +1,6 @@
 <?php
 
-namespace Joserick\Plex\Exception;
+namespace Joserick\PHPlex\Exception;
 
 use Exception;
 

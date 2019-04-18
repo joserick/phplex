@@ -1,8 +1,8 @@
 <?php
 
-namespace Joserick\Plex\Server\Library\Item\Media;
+namespace Joserick\PHPlex\Server\Library\Item\Media;
 
-use Joserick\Plex\Server\Library\Item\Media\File\Plex_Server_Library_Item_Media_File;
+use Joserick\PHPlex\Server\Library\Item\Media\File\Plex_Server_Library_Item_Media_File;
 
 /**
  * Plex Library Item Media

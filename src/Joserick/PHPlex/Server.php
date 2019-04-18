@@ -1,9 +1,9 @@
 <?php
 
-namespace Joserick\Plex;
+namespace Joserick\PHPlex;
 
-use Joserick\Plex\Machine\Plex_MachineAbstract;
-use Joserick\Plex\Server\Plex_Server_Library;
+use Joserick\PHPlex\Machine\Plex_MachineAbstract;
+use Joserick\PHPlex\Server\Plex_Server_Library;
 
 /**
  * Plex Server

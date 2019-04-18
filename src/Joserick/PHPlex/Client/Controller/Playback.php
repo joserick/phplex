@@ -1,8 +1,8 @@
 <?php
 
-namespace Joserick\Plex\Client\Controller;
+namespace Joserick\PHPlex\Client\Controller;
 
-use Joserick\Plex\Client\Plex_Client_ControllerAbstract;
+use Joserick\PHPlex\Client\Plex_Client_ControllerAbstract;
 
 /**
  * Plex Client Playback Controller

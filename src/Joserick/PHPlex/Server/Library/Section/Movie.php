@@ -1,10 +1,10 @@
 <?php
 
-namespace Joserick\Plex\Server\Library\Section;
+namespace Joserick\PHPlex\Server\Library\Section;
 
-use Joserick\Plex\Server\Library\Item\Plex_Server_Library_Item_Movie;
-use Joserick\Plex\Server\Library\Plex_Server_Library_SectionAbstract;
-use Joserick\Plex\Server\Library\Section\Plex_Server_Library_Section_FilmeTrait;
+use Joserick\PHPlex\Server\Library\Item\Plex_Server_Library_Item_Movie;
+use Joserick\PHPlex\Server\Library\Plex_Server_Library_SectionAbstract;
+use Joserick\PHPlex\Server\Library\Section\Plex_Server_Library_Section_FilmeTrait;
 
 /**
  * Plex Server Library Movie Section

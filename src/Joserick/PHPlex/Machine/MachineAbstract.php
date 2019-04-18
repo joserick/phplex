@@ -1,8 +1,8 @@
 <?php
 
-namespace Joserick\Plex\Machine;
+namespace Joserick\PHPlex\Machine;
 
-use Joserick\Plex\Exception\Plex_Exception_Machine;
+use Joserick\PHPlex\Exception\Plex_Exception_Machine;
 
 /**
  * Plex Machine

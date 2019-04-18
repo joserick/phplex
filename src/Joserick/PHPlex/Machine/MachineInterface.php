@@ -1,6 +1,6 @@
 <?php
 
-namespace Joserick\Plex\Machine;
+namespace Joserick\PHPlex\Machine;
 
 /**
  * Plex Machine

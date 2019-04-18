@@ -1,10 +1,10 @@
 <?php
 
-namespace Joserick\Plex\Client\Controller;
+namespace Joserick\PHPlex\Client\Controller;
 
-use Joserick\Plex\Client\Plex_Client_ControllerAbstract;
-use Joserick\Plex\Server\Library\Plex_Server_Library_ItemAbstract;
-use Joserick\Plex\Server\Plex_Server_Library;
+use Joserick\PHPlex\Client\Plex_Client_ControllerAbstract;
+use Joserick\PHPlex\Server\Library\Plex_Server_Library_ItemAbstract;
+use Joserick\PHPlex\Server\Plex_Server_Library;
 
 /**
  * Plex Client Application Controller

@@ -1,6 +1,6 @@
 <?php
 
-namespace Joserick\Plex\Server\Library\Section;
+namespace Joserick\PHPlex\Server\Library\Section;
 
 /**
  * Plex Server Library Filme Trait

@@ -1,11 +1,11 @@
 <?php
 
-namespace Joserick\Plex\Server;
+namespace Joserick\PHPlex\Server;
 
-use Joserick\Plex\Plex_Server;
-use Joserick\Plex\Exception\Server\Plex_Exception_Server_Library;
-use Joserick\Plex\Server\Library\Plex_Server_Library_ItemAbstract;
-use Joserick\Plex\Server\Library\Plex_Server_Library_SectionAbstract;
+use Joserick\PHPlex\Plex_Server;
+use Joserick\PHPlex\Exception\Server\Plex_Exception_Server_Library;
+use Joserick\PHPlex\Server\Library\Plex_Server_Library_ItemAbstract;
+use Joserick\PHPlex\Server\Library\Plex_Server_Library_SectionAbstract;
 
 /**
  * Plex Server Library

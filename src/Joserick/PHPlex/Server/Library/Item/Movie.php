@@ -1,8 +1,8 @@
 <?php
 
-namespace Joserick\Plex\Server\Library\Item;
+namespace Joserick\PHPlex\Server\Library\Item;
 
-use Joserick\Plex\Server\Library\Plex_Server_Library_ItemChildAbstract;
+use Joserick\PHPlex\Server\Library\Plex_Server_Library_ItemChildAbstract;
 
 /**
  * Plex Library Movie

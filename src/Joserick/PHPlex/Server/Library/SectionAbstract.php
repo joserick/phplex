@@ -1,9 +1,9 @@
 <?php
 
-namespace Joserick\Plex\Server\Library;
+namespace Joserick\PHPlex\Server\Library;
 
-use Joserick\Plex\Exception\Server\Plex_Exception_Server_Library;
-use Joserick\Plex\Server\Plex_Server_Library;
+use Joserick\PHPlex\Exception\Server\Plex_Exception_Server_Library;
+use Joserick\PHPlex\Server\Plex_Server_Library;
 use DateTime;
 
 /**
