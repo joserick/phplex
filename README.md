@@ -40,7 +40,7 @@ Also you can see all the classes, methods and properties  in the [Documentation]
 require 'vendor/autoload.php';
 
 // import the Joserick Plex
-use Joserick\Plex\Plex;
+use Joserick\PHPlex\Plex;
 
 // build plex object with you account data.
 $plex = new Plex('username', 'password', 'address');
