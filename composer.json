@@ -1,9 +1,9 @@
 {
-	"name": "joserick/php-plex",
+	"name": "joserick/phplex",
 	"type": "library",
-	"description": "A PHP library for interacting with the Plex (https://www.plex.tv) HTTP Control API. (forked from https://github.com/nickbart/php-plex)",
+	"description": "A PHP library for interacting with the Plex (https://www.plex.tv) HTTP Control API. (forked from https://github.com/joserick/phplex)",
 	"keywords": ["plex"],
-	"license": "MIT",
+	"license": "GPL-3.0",
 	"authors": [
 		{
 			"name": "Nick Bartkowiak",
