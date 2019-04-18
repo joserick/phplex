@@ -24,7 +24,7 @@ Paging has not been implemented for lists of items.
 
 ## Installation
 
-Use the package manager [Composer](https://getcomposer.org/) to install PHP-Plex.
+Use the package manager [Composer](https://getcomposer.org/) to install PHPlex.
 
 ```bash
 composer require joserick/phplex
