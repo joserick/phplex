@@ -4,6 +4,7 @@ namespace Joserick\Plex\Server\Library\Section;
 
 use Joserick\Plex\Server\Library\Item\Plex_Server_Library_Item_Movie;
 use Joserick\Plex\Server\Library\Plex_Server_Library_SectionAbstract;
+use Joserick\Plex\Server\Library\Section\Plex_Server_Library_Section_FilmeTrait;
 
 /**
  * Plex Server Library Movie Section
@@ -44,6 +45,8 @@ use Joserick\Plex\Server\Library\Plex_Server_Library_SectionAbstract;
 class Plex_Server_Library_Section_Movie 
 	extends Plex_Server_Library_SectionAbstract
 {
+	use Plex_Server_Library_Section_FilmeTrait;
+
 	/**
 	 * Endpoint for retrieving movies by four digit decade.
 	 */
@@ -58,11 +61,6 @@ class Plex_Server_Library_Section_Movie
 	 * Endpoint for retrieving movies by actor.
 	 */
 	const ENDPOINT_CATEGORY_ACTOR = 'actor';
-	
-	/**
-	 * Endpoint for retrieving movies by content rating.
-	 */
-	const ENDPOINT_CATEGORY_CONTENT_RATING = 'contentRating';
 	
 	/**
 	 * Endpoint for retrieving movies by resolution.
@@ -371,27 +369,6 @@ class Plex_Server_Library_Section_Movie
 		return $this->makeCall(
 			$this->buildUrl(
 				$this->buildEndpoint(self::ENDPOINT_CATEGORY_ACTOR)
-			)
-		);
-	}
-	
-	/**
-	 * Returns a list of content ratings for the section. We use makeCall
-	 * directly here because we want to return just the raw array of content
-	 * ratings and not do any post processing on it.
-	 *
-	 * @uses Plex_MachineAbstract::makeCall()
-	 * @uses Plex_Server_Library::buildUrl()
-	 * @uses Plex_Server_Library_SectionAbstract::buildEndpoint()
-	 * @uses Plex_Server_Library_SectionAbstract::ENDPOINT_CATEGORY_CONTENT_RATING
-	 *
-	 * @return array An array of content ratings with their names and keys.
-	 */
-	public function getContentRatings()
-	{
-		return $this->makeCall(
-			$this->buildUrl(
-				$this->buildEndpoint(self::ENDPOINT_CATEGORY_CONTENT_RATING)
 			)
 		);
 	}
