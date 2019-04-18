@@ -2,7 +2,7 @@
 	"name": "joserick/phplex",
 	"type": "library",
 	"description": "A PHP library for interacting with the Plex (https://www.plex.tv) HTTP Control API. (forked from https://github.com/joserick/phplex)",
-	"keywords": ["plex"],
+	"keywords": ["plex", "media", "api"],
 	"license": "GPL-3.0",
 	"authors": [
 		{
