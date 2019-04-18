@@ -1,7 +1,7 @@
 
-# PHP-Plex
+# PHPlex
 
-PHP-Plex is a library for interacting with the [Plex Manager Server](https://www.plex.tv) thought its [API-HTTP](https://github.com/Arcanemagus/plex-api/wiki/Plex-Web-API-Overview).
+PHPlex is a library for interacting with the [Plex Manager Server](https://www.plex.tv) thought its [API-HTTP](https://github.com/Arcanemagus/plex-api/wiki/Plex-Web-API-Overview).
 
 ## Requirements
 
@@ -27,12 +27,12 @@ Paging has not been implemented for lists of items.
 Use the package manager [Composer](https://getcomposer.org/) to install PHP-Plex.
 
 ```bash
-composer require joserick/php-plex
+composer require joserick/phplex
 ```
 ## Documentation
-You can see more function of PHP-Plex in [Github Wiki](https://github.com/joserick/php-plex/wiki).
+You can see more function of PHPlex in [Github Wiki](https://github.com/joserick/phplex/wiki).
 
-Also you can see all the classes, methods and properties  in the [Documentation](http://docs.joserick.com/php-plex/index.html).
+Also you can see all the classes, methods and properties  in the [Documentation](http://docs.joserick.com/phplex/index.html).
 ## Getting a PlexServer Instance
 
 ```php
@@ -56,7 +56,7 @@ $servers = array(
 		'password' => 'password' // Password of the plex.tv account.
 		'address' => '192.168.11.9', // Ip of the server, default localhost.
 		'port' => '32401' // Ip port, default 32400.
-		'token' => '********' // Connexion token, default php-plex generate one.
+		'token' => '********' // Connexion token, default phplex generate one.
 	),
 	// ...
 );
@@ -105,12 +105,12 @@ foreach ($last_episode->getMedia()->getFiles() as $file){
 }
 ```
 ## Changelog
-Please see [CHANGELOG](https://github.com/joserick/php-plex/blob/master/CHANGELOG.md) for more information what has changed recently.
+Please see [CHANGELOG](https://github.com/joserick/phplex/blob/master/CHANGELOG.md) for more information what has changed recently.
 ## Credits
 
  - [Nick Bart](https://github.com/nickbart)
- - [All Contributors](https://github.com/joserick/php-plex/graphs/contributors)
+ - [All Contributors](https://github.com/joserick/phplex/graphs/contributors)
 
 ## License
 
-The GNU Public License (GPLv3). Please see [License File](https://github.com/joserick/php-plex/blob/master/LICENSE) for more information.
+The GNU Public License (GPLv3). Please see [License File](https://github.com/joserick/phplex/blob/master/LICENSE) for more information.
