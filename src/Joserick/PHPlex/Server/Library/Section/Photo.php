@@ -3,6 +3,7 @@
 namespace Joserick\PHPlex\Server\Library\Section;
 
 use Joserick\PHPlex\Server\Library\Plex_Server_Library_SectionAbstract;
+use Joserick\PHPlex\Server\Library\Plex_Server_Library_SectionTrait;
 
 /**
  * Plex Server Library Photo Section
@@ -43,6 +44,8 @@ use Joserick\PHPlex\Server\Library\Plex_Server_Library_SectionAbstract;
 class Plex_Server_Library_Section_Photo 
 	extends Plex_Server_Library_SectionAbstract
 {
+	use Plex_Server_Library_SectionTrait;
+	
 	// STUB! Need to implement this. This has been added to stop the library's
 	// getSection() method from crashing if it detects a photo section and
 	// attempts instantiation. This is on the back burner and scheduled to be

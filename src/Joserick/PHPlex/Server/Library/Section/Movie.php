@@ -4,6 +4,7 @@ namespace Joserick\PHPlex\Server\Library\Section;
 
 use Joserick\PHPlex\Server\Library\Item\Plex_Server_Library_Item_Movie;
 use Joserick\PHPlex\Server\Library\Plex_Server_Library_SectionAbstract;
+use Joserick\PHPlex\Server\Library\Plex_Server_Library_SectionTrait;
 use Joserick\PHPlex\Server\Library\Section\Plex_Server_Library_Section_FilmeTrait;
 
 /**
@@ -46,6 +47,7 @@ class Plex_Server_Library_Section_Movie
 	extends Plex_Server_Library_SectionAbstract
 {
 	use Plex_Server_Library_Section_FilmeTrait;
+	use Plex_Server_Library_SectionTrait;
 
 	/**
 	 * Endpoint for retrieving movies by four digit decade.

@@ -3,6 +3,7 @@
 namespace Joserick\PHPlex\Server\Library\Section;
 
 use Joserick\PHPlex\Server\Library\Plex_Server_Library_SectionAbstract;
+use Joserick\PHPlex\Server\Library\Plex_Server_Library_SectionTrait;
 use Joserick\PHPlex\Server\Library\Item\Plex_Server_Library_Item_Album;
 use Joserick\PHPlex\Server\Library\Item\Plex_Server_Library_Item_Artist;
 
@@ -45,6 +46,8 @@ use Joserick\PHPlex\Server\Library\Item\Plex_Server_Library_Item_Artist;
 class Plex_Server_Library_Section_Artist
 	extends Plex_Server_Library_SectionAbstract
 {
+	use Plex_Server_Library_SectionTrait;
+	
 	/**
 	 * Endpoint for retrieving albums.
 	 */
