@@ -1,6 +1,6 @@
 <?php 
 
-namespace Joserick\PHPlex\Server\Library\Section;
+namespace Joserick\PHPlex\Server\Library;
 
 /**
  * Plex Server Library Section Trait
