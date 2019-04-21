@@ -60,24 +60,4 @@ Trait Plex_Server_Library_Section_FilmeTrait
 			)
 		);
 	}
-	
-	private function __call($name, $arguments)
-	{
-		$type = ucfirst($this->type);
-		if (method_exists($this, $name.$type)){
-			return call_user_func_array([$this, $name.$type.'s'], $arguments);
-		}
-		if (strlen($name)>3) {
-			$method = substr_replace($name, $type, 3, 0).'s';
-			if (method_exists($this, $method)){
-				return call_user_func_array([$this, $method], $arguments);
-			}
-		}
-		if ($name == 'get') {
-			if (method_exists($this, $name.$type)){
-				return call_user_func_array([$this, $name.$type], $arguments);
-			}
-		}
-		trigger_error('Call to undefined method '.__CLASS__.'::'.$name.'()', E_USER_ERROR);
-	}
 }
