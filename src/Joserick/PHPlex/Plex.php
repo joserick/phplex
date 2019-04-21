@@ -229,6 +229,11 @@ class Plex
 	 * @throws Plex_Exception_Server Server token not obtained.
 	 */
 	private function getToken($username, $password) {
+		session_name('phplex');
+		session_start(['cookie_lifetime' => 3600]);
+		if (isset($_SESSION["phplex_token"])) {
+			return $_SESSION["phplex_token"];
+		}
 		$host = "https://plex.tv/users/sign_in.json";
 		$header = array(
 			'Content-Type: application/xml; charset=utf-8',
@@ -252,7 +257,6 @@ class Plex
 			);
 		}
 		curl_close($process);
-		
-		return json_decode($data, true)['user']['authentication_token'];
+		return $_SESSION["phplex_token"] = json_decode($data, true)['user']['authentication_token'];
 	}
 }
