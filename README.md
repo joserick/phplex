@@ -69,7 +69,7 @@ $server = $plex->getServer('my_server');
 ```php
 // First get a section of type movie.
 $section = $server->getLibrary()->getSection('Movies');
-$movies = $section->getUnwatchedMovies();
+$movies = $section->getUnwatched();
 foreach ($movies as $movie){
 	echo $movie->title;
 }
@@ -78,28 +78,28 @@ foreach ($movies as $movie){
 ```php
 $clients = $plex->getAllClients();
 foreach ($clients as $client){
-	echo $client->name;
+	echo $client->getName();
 }
 // Get a client specific.
 $client_version = $plex->getClient('Chrome')->version;
 ```
-### Example 3: List all genre in a section type movie.
+### Example 3: List all genres in a section of type movie.
 ```php
-$section = $server->getLibrary()->getSection('TV Shows')->```
+$section = $server->getLibrary()->getSection('TV Shows')->
 foreach ($section->getGenres() as $genre){
-	echo $genre->title;
+	echo $genre->getName();
 }
 ```
 ### Example 4: List all movies in a section with the word 'Terminator' in the title.
 ```php
 $section = $server->getLibrary()->getSection('Movies');
-foreach ($section->searchMovies('terminator') as $movie){
-	echo $movie->name;
+foreach ($section->search('terminator') as $movie){
+	echo $movie->getTitle();
 }
 ```
 ### Example 5: List all file for the latest episode of 'Friends'.
 ```php
-$last_episode = $server->getLibrary()->getSection('TV Shows')->getShow('Friends')->getEpisodes()[-1];
+$last_episode = $server->getLibrary()->getSection('TV Shows')->get('Friends')->getEpisodes()[-1];
 foreach ($last_episode->getMedia()->getFiles() as $file){
 	echo $file->getPath();
 }
