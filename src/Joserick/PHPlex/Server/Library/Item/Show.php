@@ -127,8 +127,32 @@ class Plex_Server_Library_Item_Show
 	 *
 	 * @return integer Count of seasons of the Plex library Show.
 	 */
-	public function getCountSeasons()
+	public function getSeasonsCount()
 	{
 		return 	$this->getChildCount();
+	}
+
+	/**
+	 * Returns an integer of the Episodes number for the instantiated show.
+	 *
+	 * @uses Plex_Server_Library_ItemGrandparentAbstract::getLeafCount()
+	 *
+	 * @return integer Count of episodes of the Plex library Show.
+	 */
+	public function getEpisodesCount()
+	{
+		return 	$this->getLeafCount();
+	}
+
+	/**
+	 * Returns an integer of the number of episodes viewed for the instantiated show.
+	 *
+	 * @uses Plex_Server_Library_ItemGrandparentAbstract::getViewedLeafCount()
+	 *
+	 * @return integer Count of episodes viewed of the Plex library Show.
+	 */
+	public function getViewedEpisodesCount()
+	{
+		return 	$this->getViewedLeafCount();
 	}
 }
