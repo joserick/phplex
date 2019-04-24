@@ -640,6 +640,26 @@ abstract class Plex_Server_Library_SectionAbstract extends Plex_Server_Library
 			);
 		}
 	}
+	
+	/**
+	 * Returns a list of alphanumeric of first letter for the child class's section. We use
+	 * makeCall directly here, because we want to return just the raw array of
+	 * caracters and not do any post processing on it.
+	 * 
+	 * @uses Plex_Server_Library::getItems()
+	 * @uses Plex_Server_Library_SectionAbstract::buildEndpoint()
+	 * @uses Plex_Server_Library_SectionAbstract::ENDPOINT_CATEGORY_FIRST_CHARACTER
+	 *
+	 * @return array An array of first letter of the items.
+	 */
+	public function getAlphabet()
+	{
+		return $this->makeCall(
+			$this->buildUrl(
+				$this->buildEndpoint(self::ENDPOINT_CATEGORY_FIRST_CHARACTER)
+			)
+		);
+	}
 		
 	/**
 	 * Returns a list of collections for the child class's section. We use
