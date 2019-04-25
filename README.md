@@ -104,6 +104,13 @@ foreach ($last_episode->getMedia()->getFiles() as $file){
 	echo $file->getPath();
 }
 ```
+### Example 6: List of the first character of each item of a section
+```php
+$alphabet = $server->getLibrary()->getSection('TV Shows')->getAlphabet();
+foreach ($alphabet as $letter){
+	echo $letter;
+}
+```
 ## Changelog
 Please see [CHANGELOG](https://github.com/joserick/phplex/blob/master/CHANGELOG.md) for more information what has changed recently.
 ## Credits
