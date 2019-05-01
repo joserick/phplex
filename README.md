@@ -71,7 +71,7 @@ $server = $plex->getServer('my_server');
 $section = $server->getLibrary()->getSection('Movies');
 $movies = $section->getUnwatched();
 foreach ($movies as $movie){
-	echo $movie->title;
+	echo $movie->getTitle();
 }
 ```
 ### Example 2: List all clients connected to the Server.
