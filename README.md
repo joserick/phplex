@@ -85,7 +85,7 @@ $client_version = $plex->getClient('Chrome')->version;
 ```
 ### Example 3: List all genres in a section of type movie.
 ```php
-$section = $server->getLibrary()->getSection('TV Shows')->
+$section = $server->getLibrary()->getSection('TV Shows')
 foreach ($section->getGenres() as $genre){
 	echo $genre->getName();
 }
