@@ -32,7 +32,7 @@ composer require joserick/phplex
 ## Documentation
 You can see more function of PHPlex in [Github Wiki](https://github.com/joserick/phplex/wiki).
 
-Also you can see all the classes, methods and properties  in the [Documentation](http://docs.joserick.com/phplex/index.html).
+Also you can see all the classes, methods and properties  in the [Documentation](https://joserick.com/docs/phplex/index.html).
 ## Getting a PlexServer Instance
 
 ```php
