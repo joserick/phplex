@@ -1,3 +1,19 @@
+# ${\color{red}Este\ repositorio\ está\ abandonado}$
+
+
+**Atención:** Este proyecto ya no está en desarrollo activo y se considera abandonado. No se realizarán actualizaciones ni se brindará soporte adicional.
+
+## Motivo del abandono
+
+Debido a limitaciones de tiempo y recursos, este proyecto ha sido abandonado. Lamentablemente, ya no dispongo del tiempo necesario para mantenerlo y brindarle el desarrollo activo que se merece.
+
+Además, desde la creación de este proyecto han surgido nuevas alternativas y soluciones más avanzadas que cubren las necesidades actuales de manera más eficiente. Recomiendo explorar las siguientes alternativas, que ofrecen características y mejoras adicionales:
+
+## Alternativo
+
+- [Plex API](https://github.com/jc21/plex-api): Esta alternativa cuenta con una comunidad activa y continuo desarrollo. Ofrece funcionalidades más avanzadas y comandos más intuitiva.
+
+Agradecemos el interés y el apoyo que este proyecto ha recibido hasta ahora. Si tienes alguna pregunta o inquietud, no dudes en contactarnos, pero ten en cuenta que es poco probable que recibas una respuesta o solución.
 
 # PHPlex
 
